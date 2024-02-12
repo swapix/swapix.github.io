@@ -1,0 +1,82 @@
+/* Footer-Stile */
+footer {
+    background-color: #ededed; /* Hintergrundfarbe des Footers */
+    color: #ccc; /* Textfarbe im Footer */
+    padding: 50px 0; /* Innenabstand des Footers */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Schatten unter dem Footer */
+}
+
+.footer-content {
+    max-width: 1200px; /* Maximale Breite des Inhalts im Footer */
+    margin: 0 auto; /* Zentrierung des Inhalts */
+    display: flex; /* Flexbox-Layout */
+    justify-content: space-between; /* Platzierung des Inhalts */
+    align-items: center; /* Ausrichtung des Inhalts */
+}
+
+.footer-logo {
+    color: #1d2d52; 
+    font-size: 2em; /* Größe des Logos */
+    font-weight: bold; /* Fetter Schriftstil */
+}
+
+.footer-menu {
+    list-style-type: none; /* Entfernen der Listenpunkte */
+    padding: 0; /* Entfernen des Innenabstands */
+    display: flex; /* Flexbox-Layout */
+}
+
+.footer-menu li {
+    margin-right: 20px; /* Abstand zwischen den Menüpunkten */
+}
+
+.footer-menu li:last-child {
+    margin-right: 0; /* Kein Abstand für das letzte Element */
+}
+
+.footer-menu a {
+    color: #414141; /* Textfarbe der Links */
+    text-decoration: none; /* Entfernen der Unterstreichung */
+    transition: color 0.3s; /* Übergangseffekt für die Textfarbe */
+}
+
+.footer-menu a:hover {
+    color: #1d2d52; /* Textfarbe der Links beim Schweben */
+}
+
+.footer-social-icons {
+    display: flex; /* Flexbox-Layout für die Social-Media-Icons */
+}
+
+.footer-social-icons a {
+    color: #ccc; /* Farbe der Social-Media-Icons */
+    font-size: 1.5em; /* Größe der Social-Media-Icons */
+    margin-right: 15px; /* Abstand zwischen den Icons */
+    transition: color 0.3s; /* Übergangseffekt für die Farbe */
+}
+
+.footer-social-icons a:hover {
+    color: #1d2d52; /* Farbe der Icons beim Schweben */
+}
+
+/* Zusätzliche Stile für den unteren Bereich des Footers */
+.footer-bottom {
+    color: #333; /* Textfarbe im unteren Bereich des Footers */
+    padding: 20px 0; /* Innenabstand des unteren Bereichs des Footers */
+}
+
+.footer-bottom-content {
+    max-width: 1200px; /* Maximale Breite des Inhalts im unteren Bereich des Footers */
+    margin: 0 auto; /* Zentrierung des Inhalts */
+    text-align: left; /* Textausrichtung zentriert */
+}
+
+.footer-bottom-content a {
+    color: #333; /* Textfarbe der Links im unteren Bereich des Footers */
+    text-decoration: none; /* Entfernen der Unterstreichung */
+    transition: color 0.3s; /* Übergangseffekt für die Textfarbe */
+}
+
+.footer-bottom-content a:hover {
+    color:#1d2d52; /* Textfarbe der Links im unteren Bereich des Footers beim Schweben */
+}
