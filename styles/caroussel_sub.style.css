@@ -35,6 +35,12 @@
     color:#232222;
 }
 
+.subscription .btn-sec-premium{
+    color:#232222;
+    background: linear-gradient(195deg, #ffffe2, #ffffff); 
+    border-color: #a28a29;
+}
+
 .basic-card {
     background-color: #ffffff; /* Light gray background */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);  /* Shadow around the card */
@@ -53,6 +59,23 @@
     font-size: 12px; /* Font size */
     animation: pulse 1s infinite alternate; /* Animation */
 }
+
+
+.badge-premium {
+    background-color: #ffffff; /* Light gray background dow around the card */
+    font-weight: bold;
+    position: relative;
+    position: absolute; /* Absolute positioning for badge */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background: linear-gradient(195deg, #a28a29, #e6d70a); 
+    color: #fff; /* Badge text color */
+    padding: 5px 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 12px; /* Font size */
+    animation: pulse 1s infinite alternate; /* Animation */
+}
+
 
 @keyframes pulse {
     0% {
