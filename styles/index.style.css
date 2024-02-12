@@ -1,0 +1,142 @@
+.accent-color {
+    color: #3533cd; /* Akzentfarbe */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #000; /* Schwarze Schriftfarbe */
+}
+
+.nav-link {
+    color:#343a40;
+}
+
+.nav-item{
+    color:#343a40;
+}
+
+.navbar {
+    background-color: #ffffff; /* Weiße Hintergrundfarbe */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Schatten */
+}
+
+.navbar-toggler {
+    border-color: #000; /* Farbe des Navbar-Toggle-Buttons */
+}
+
+.navbar-toggler-icon {
+    background-color: #6b6b6b; /* Farbe des Navbar-Toggle-Icons */
+}
+
+.hero {
+    background: linear-gradient(45deg, #17144e, #3533cd);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+
+.btn-primary:hover {
+    background-color: #5753d6;
+    border-color: #5753d6;
+}
+
+.attention-element {
+    background-color: #fff;
+    color: #6c63ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+}
+
+.attention-element h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.attention-element p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* SVG-Logo im Header */
+.svg-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.btn-account {
+    background-color: #fff; /* Hintergrundfarbe des Account-Buttons */
+    color: #110b8d; /* Textfarbe des Account-Buttons */
+    border-color: #6c63ff; /* Randfarbe des Account-Buttons */
+}
+
+.btn-account:hover {
+    background-color: #f8f9fa; /* Hintergrundfarbe des Account-Buttons beim Hover */
+    color: #6c63ff; /* Textfarbe des Account-Buttons beim Hover */
+    border-color: #6c63ff; /* Randfarbe des Account-Buttons beim Hover */
+}
+
+.features {
+    padding: 100px 0;
+}
+
+.feature-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav a {
+    color: #fff;
+}
+
+.accent-color {
+    color: #6c63ff; /* Akzentfarbe */
+}

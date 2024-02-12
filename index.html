@@ -11,22 +11,23 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts/index.script.js"></script>
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-white">
         <div class="container">
-            <a class="navbar-brand" href="#">SwapiX</a>
+            <!-- SVG-Grafik neben dem Brand-Namen -->
+            <a class="navbar-brand" href="#">
+                <img src="/media/icons/logo.png" alt="SwapiX Logo" class="svg-logo">
+                SwapiX
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Features</a>
                     </li>
@@ -34,21 +35,36 @@
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Login / Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary btn-account" href="#">Account</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero text-center text-white py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <h1 class="display-4 mb-4 animated fadeInLeft">Welcome to SwapiX</h1>
-                    <p class="lead mb-4 animated fadeInRight">A crypto social media platform for connecting with like-minded individuals and exploring the world of cryptocurrency.</p>
-                    <a href="#" class="btn btn-primary btn-lg animated fadeInUp">Get Started</a>
+                    <svg width="171" height="172" viewBox="0 0 171 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.622681" width="170.66" height="170.66" rx="42.6651" fill="url(#paint0_linear_35_1766)"/>
+                        <path d="M42.665 102.841L97.2657 48.2404" stroke="white" stroke-width="5.67005" stroke-linejoin="round"/>
+                        <path d="M97.5525 47.9542H100.388V45.1192H97.5525V47.9542ZM65.0977 50.7892H97.5525V45.1192H65.0977V50.7892ZM94.7175 47.9542V80.4091H100.388V47.9542H94.7175Z" fill="white"/>
+                        <path d="M128.217 69.2868L73.6161 123.887" stroke="white" stroke-width="5.67005" stroke-linejoin="round"/>
+                        <path d="M73.3293 124.174H70.4943V127.009H73.3293V124.174ZM105.784 121.339H73.3293V127.009H105.784V121.339ZM76.1644 124.174V91.7187H70.4943V124.174H76.1644Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_35_1766" x1="97.9964" y1="69.9535" x2="19.6659" y2="161.617" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3533cd"/>
+                                <stop offset="1" stop-color="#1d2d52"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <h1 class="display-4 mb-4 animated fadeInDown">Welcome to SwapiX</h1>
+                    <p class="lead mb-4 animated fadeInUp">A crypto social media platform for connecting with like-minded individuals and exploring the world of cryptocurrency.</p>
+                    <a href="#" class="btn btn-primary btn-lg animated fadeIn">Get Started</a>
                 </div>
             </div>
         </div>
