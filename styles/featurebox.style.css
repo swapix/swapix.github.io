@@ -1,0 +1,16 @@
+.features {
+    padding: 100px 0;
+}
+
+.feature-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
