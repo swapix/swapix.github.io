@@ -1,0 +1,13 @@
+/* Custom CSS for button styling */
+.btn-border {
+    border: 2px solid #858585; /* Blue border color */
+    background-color: transparent; /* Transparent background */
+    color: #002247; /* Blue text color */
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.btn-border:hover {
+    background-color: #d3e4f7; /* Blue background color on hover */
+    color: #002247; /* White text color on hover */
+    border-color: #575757; /* Blue border color on hover */
+}

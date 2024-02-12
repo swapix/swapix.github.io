@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/styles/animations.style.css"> 
     <link rel="stylesheet" href="/styles/featurebox.style.css"> 
     <link rel="stylesheet" href="/styles/hero.style.css"> 
+    <link rel="stylesheet" href="/styles/side_button.style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -38,7 +39,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="/pages/features/">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -75,11 +76,14 @@
     <section class="features">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-4">
+                <div class="col-md-9 mb-4">
                     <h2 class="fadeInUpstatic">Features</h2>
-                    <p class="lead fadeInUpstatic">A short overview what you can do with our platform:</p>
+                    <p class="lead fadeInUpstatic">A short overview of what you can do with our platform:</p>
                 </div>
-            </div> 
+                <div class="col-md-3 mb-4 text-right" >
+                    <button id="viewMoreBtn" type="button" class="btn btn-primary rounded btn-border" >View More <i class="fas fa-arrow-right ml-2"></i></button>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="feature-box text-center p-4 mb-4">

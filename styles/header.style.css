@@ -26,6 +26,10 @@
     margin: 0 10px;
 }
 
+.nav-enabled{
+    color: #262560;
+}
+
 .nav-link {
     color: #000; /* Schwarze Schriftfarbe */
     transition: all 0.3s ease; /* Fließende Übergänge */
@@ -47,6 +51,7 @@
 .nav-link:hover::before {
     transform: scaleX(1); /* Unterstrich erscheint beim Hover */
 }
+
 
 .btn-primary {
     background-color: #6c63ff;
