@@ -68,7 +68,7 @@
     position: absolute; /* Absolute positioning for badge */
     top: 10px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
-    background: linear-gradient(195deg, #a28a29, #e6d70a); 
+    background: linear-gradient(195deg, #293fa2, #0ab6e6); 
     color: #fff; /* Badge text color */
     padding: 5px 10px; /* Padding */
     border-radius: 5px; /* Rounded corners */
