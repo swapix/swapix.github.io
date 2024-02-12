@@ -25,6 +25,44 @@
     flex: 1;
 }
 
+.subscription .btn{
+    background: linear-gradient(195deg, #252587, #284c9f); 
+    color:#fff;
+}
+
+.subscription .btn-sec{
+    background: linear-gradient(195deg, #eeeeef, #ffffff); 
+    color:#232222;
+}
+
+.basic-card {
+    background-color: #ffffff; /* Light gray background */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);  /* Shadow around the card */
+    
+    position: relative;
+}
+
+.badge {
+    position: absolute; /* Absolute positioning for badge */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background: linear-gradient(195deg, #252587, #284c9f); 
+    color: #fff; /* Badge text color */
+    padding: 5px 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 12px; /* Font size */
+    animation: pulse 1s infinite alternate; /* Animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
 .section-divider {
     border: none;
     height: 1px;
