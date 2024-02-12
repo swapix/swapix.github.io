@@ -8,6 +8,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
     transition: all 0.3s ease;
+    animation: fadeIn 1s ease forwards;
 }
 
 .feature-box:hover {

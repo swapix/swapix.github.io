@@ -1,5 +1,8 @@
 body {
-    background-color: #f8f9fa;
+    background-image: url("/media/backgrounds/telephone_stock.jpg");
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 .contact-form {
     background-color: #fff;
@@ -7,6 +10,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
     max-width: 500px;
+    animation: fadeInUp 1s ease forwards;
     margin: 0 auto;
 }
 .contact-form input[type="text"],
@@ -35,4 +39,24 @@ body {
 }
 .contact-form button[type="submit"]:hover {
     background-color: #0056b3;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
