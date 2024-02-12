@@ -2,11 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="icon" content="/media/icons/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwapiX - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles/index.style.css"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body>
-       
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">SwapiX</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <h1 class="display-4 mb-4 animated fadeInLeft">Welcome to SwapiX</h1>
+                    <p class="lead mb-4 animated fadeInRight">A crypto social media platform for connecting with like-minded individuals and exploring the world of cryptocurrency.</p>
+                    <a href="#" class="btn btn-primary btn-lg animated fadeInUp">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4 mb-4">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h3>Connect</h3>
+                        <p>Connect with like-minded individuals and expand your crypto network.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4 mb-4">
+                        <i class="fas fa-chart-line fa-3x mb-3"></i>
+                        <h3>Explore</h3>
+                        <p>Explore the latest trends, news, and insights in the world of cryptocurrency.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4 mb-4">
+                        <i class="fas fa-lock fa-3x mb-3"></i>
+                        <h3>Secure</h3>
+                        <p>Rest assured knowing that your data and transactions are securely encrypted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 SwapiX. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <ul class="footer-nav">
+                        <li><a href="#" class="text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
