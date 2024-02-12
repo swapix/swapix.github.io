@@ -1,0 +1,15 @@
+/* Styles for Sidebar Navigation */
+.sidebar {
+    height: 100%; /* Full height */
+}
+
+.sidebar .nav-link {
+    padding: 10px 20px; /* Padding for links */
+    color: #343a40; /* Link color */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.sidebar .nav-link:hover {
+    background-color: #e9ecef; /* Background color on hover */
+}
+
