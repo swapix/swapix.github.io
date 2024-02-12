@@ -137,15 +137,6 @@ body {
     transform-origin: center;
 }
 
-@keyframes moveArrows {
-    0% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(20px);
-    }
-}
-
 .btn-primary {
     background-color: #6c63ff;
     border-color: #6c63ff;
@@ -156,35 +147,6 @@ body {
     border-color: #5753d6;
 }
 
-.attention-element {
-    background-color: #fff;
-    color: #6c63ff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 80%;
-}
-
-.attention-element h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.attention-element p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-/* SVG-Logo im Header */
-.svg-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
 .btn-account {
     background-color: #fff; /* Hintergrundfarbe des Account-Buttons */
     color: #110b8d; /* Textfarbe des Account-Buttons */
