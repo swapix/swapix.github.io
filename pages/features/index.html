@@ -15,31 +15,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="/styles/index.style.css"> 
-    <link rel="stylesheet" href="/styles/sidebar.style.css"> 
+    <link rel="stylesheet" href="/styles/animations.style.css">
     <link rel="stylesheet" href="/styles/footer.style.css"> 
     <link rel="stylesheet" href="/styles/header.style.css"> 
-    <link rel="stylesheet" href="/styles/featurebox.style.css"> 
     <link rel="stylesheet" href="/styles/hero.style.css"> 
+    <link rel="stylesheet" href="/styles/explorer.style.css"> 
+    <link rel="stylesheet" href="/styles/subscription_footer.style.css">
+    <link rel="stylesheet" href="/styles/feature_sections.style.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
     <!-- Slick Carousel Stylesheets -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
     <!-- External JavaScript libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/scripts/contact.script.js"></script>
+    <script async src="/scripts/features.script.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-white">
         <div class="container">
-            <!-- Brand Logo -->
             <a class="navbar-brand" href="/">
                 <img src="/media/icons/logo.png" alt="SwapiX Logo" class="svg-logo">
                 <a class="navbar-brand">SwapiX -<small> Features</small></a>
@@ -64,25 +68,180 @@
             </div>
         </div>
     </nav>
-    
-</body>
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-logo">SwapiX</div>
-        <ul class="footer-menu">
-            <li><a href="/pages/contact/">Contact</a></li>
-            <li><a href="/pages/terms-of-service/">Terms of Service</a></li>
-            <li><a href="/pages/privacy-policy/">Privacy Policy</a></li>
-        </ul>
-        <div class="footer-social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/swap_ix/"><i class="fab fa-instagram"></i></a>
+    <div class="explore-panel">
+        <div class="particle-animation"></div>
+        <div class="explore-content">
+            <h1 class="fadeInUpstatic">Explore SwapiX</h1>
+            <p class="fadeInUpstatic">Discover the features that make SwapiX the ultimate trading platform.</p>
+            
+        </div>
+        <div class="scroll-down fadeInUpstatic">
+            <i class="fas fa-chevron-down  icon-container"></i>
         </div>
     </div>
-    <div class="footer-bottom">
-        <div class="footer-bottom-content">© 2024 JW Limited. All Rights Reserved.</div>
-    </div>
-</footer>
+        <section class="feature-section scroll-animation" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 order-md-2">
+                        <img src="/media/backgrounds/feed preview.jpg" alt="Social Media Feed">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h2>Youre Feed</h2>
+                        <p>Stay updated with real-time trading activity and market insights through a personalized social media feed. Discover trending topics, news, and analysis shared by traders you follow.</p>
+                        <ul>
+                            <li>Personalized feed based on your interests and preferences</li>
+                            <li>Scroll through live updates from traders and industry experts</li>
+                            <li>Access breaking news and market analysis</li>
+                            <li>Filter content based on asset classes, sectors, or specific traders</li>
+                            <li>Engage with posts by liking, commenting, and sharing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- Feature Section 1 -->
+        <section class="feature-section scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/media/backgrounds/telephone_stock.jpg" alt="Professional Analysis">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Professional Analysis</h2>
+                        <p>Access in-depth analysis tools to make informed trading decisions. Utilize advanced charting, technical indicators, and real-time market data.</p>
+                        <ul>
+                            <li>Advanced charting</li>
+                            <li>Technical indicators</li>
+                            <li>Real-time market data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 2 -->
+        <section class="feature-section scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 order-md-2">
+                        <img src="/media/backgrounds/man_ver_stocky.jpg" alt="Support from Industry Legends">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h2>Support from Industry Legends</h2>
+                        <p>Get insights and advice from industry legends and experienced traders. Access exclusive webinars, interviews, and trading strategies.</p>
+                        <ul>
+                            <li>Exclusive webinars</li>
+                            <li>Interviews</li>
+                            <li>Trading strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 3 -->
+        <section class="feature-section scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="https://apptweak-blog.imgix.net/2023/03/most-downloaded-trading-apps-3.png?auto=format&fit=crop&h=360&q=95&w=480" alt="Third-Party Integration">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Third-Party Integration</h2>
+                        <p>Integrate with third-party trading platforms, tools, and APIs to streamline your trading workflow. Access additional data sources and enhance your trading experience.</p>
+                        <ul>
+                            <li>Trading platforms integration</li>
+                            <li>API access</li>
+                            <li>Additional data sources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Additional Feature Section -->
+        <section class="feature-section scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 order-md-2">
+                        <img src="/media/backgrounds/community_preview.jpg" alt="Community Interaction">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h2>Community Interaction</h2>
+                        <p>Engage with a community of traders, share insights, and discuss trading strategies. Collaborate on research, participate in challenges, and network with like-minded individuals.</p>
+                        <ul>
+                            <li>Discussion forums</li>
+                            <li>Collaborative research</li>
+                            <li>Trading challenges</li>
+                            <li>Networking opportunities</li>
+                            <li>Leaderboards and rankings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/media/backgrounds/account_preview.jpg" alt="Trader Profiles">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Trader Profiles</h2>
+                        <p>Create and customize your trader profile to showcase your trading journey, performance, and expertise. Connect with other traders, build your reputation, and grow your network.</p>
+                        <ul>
+                            <li>Personalize your profile with bio, photo, and trading statistics</li>
+                            <li>Display your trading history, achievements, and portfolio performance</li>
+                            <li>Followers and following functionality to track your network</li>
+                            <li>Publicly share your trades and insights to attract followers</li>
+                            <li>Recommendations and endorsements from other traders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="subscription-header">
+                    <h2>Interested?</h2>
+                    <p>Upgrade to SwapiX Premium and unlock exclusive features.</p>
+                </div>
+                <div class="subscription-checks">
+                    <ul>
+                        <li><i class="fas fa-check"></i> No credit card required</li>
+                        <li><i class="fas fa-check"></i> Cancel anytime</li>
+                        <li><i class="fas fa-check"></i> 30-day free trial</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$9.99<small class="text-muted">/ month</small></h1>
+                    <button class="btn btn-primary">Start Your Free Trial</button>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SwapiX</div>
+            <ul class="footer-menu">
+                <li><a href="/pages/contact/">Contact</a></li>
+                <li><a href="/pages/terms-of-service/">Terms of Service</a></li>
+                <li><a href="/pages/privacy-policy/">Privacy Policy</a></li>
+            </ul>
+            <div class="footer-social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/swap_ix/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">© 2024 JW Limited. All Rights Reserved.</div>
+        </div>
+    </footer>
 </html>
 

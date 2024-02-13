@@ -3,10 +3,13 @@
     color: #000; /* Schwarze Schriftfarbe */
 }
 
-.navbar {
+.navbar 
+{
+    transition: background-color 0.3s ease;
+    width: 100%;
+    z-index: 1000;
     background-color: #fff; /* Weiße Hintergrundfarbe */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Schatten */
-    border-radius: 0; /* Keine abgerundeten Ecken */
     border-bottom: 1px solid #eee; /* Unterstrich */
 }
 

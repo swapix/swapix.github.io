@@ -1,0 +1,157 @@
+.feature-section {
+    padding: 60px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    z-index: 1;
+}
+.feature-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+.feature-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.5s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.5s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-section ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-section ul li {
+    margin-bottom: 10px;
+}
+
+.feature-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: scaleIn 0.5s ease-out;
+    z-index: 3;
+}
+
+/* Alternate background color for feature sections */
+.feature-section:nth-child(even) {
+    color:#f8f9fa;
+    background: linear-gradient(195deg, #030321, #1d2d52);
+    z-index: 2;
+}
+
+.feature-section:nth-child(even) h2 {
+    color:#f8f9fa;
+    z-index: 2;
+}
+
+.feature-section:nth-child(even) p {
+    color:#d0d0d0;
+    z-index: 2;
+}
+
+.feature-section:nth-child(even) ul {
+    color:#b3b3b3;
+    z-index: 2;
+}
+
+.feature-section:nth-child(even) img {
+    color:#b3b3b3;
+    z-index: 3;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scale-in animation */
+  @keyframes scale-in {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Slide-in from left animation */
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Slide-in from right animation */
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+ 

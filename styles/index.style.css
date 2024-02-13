@@ -8,3 +8,35 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.subscription-checks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subscription-checks li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.subscription-checks li i {
+    color: #28a745;
+    margin-right: 5px;
+}
+
+.subscription-checks-lite ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subscription-checks-lite li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.subscription-checks-lite li i {
+    color: #898989;
+    margin-right: 5px;
+}

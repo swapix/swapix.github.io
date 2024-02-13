@@ -1,0 +1,106 @@
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.subscription-header {
+    margin-bottom: 40px;
+}
+
+.subscription-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.subscription-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.subscription-checks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subscription-checks li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.subscription-checks li i {
+    color: #28a745;
+    margin-right: 5px;
+}
+
+.subscription-card {
+    background-color: #ffffff;
+}
+
+.card-header h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-body p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.price-option h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.price-option p {
+    font-size: 1.1rem;
+}
+
+.price-badge {
+    text-align: right;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.price-badge .badge {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.pricing-card-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.card-body button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(195deg, #030321, #1d2d52);;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+
+.card-body button:focus {
+    outline: none;
+}
+
+.card-body button:active {
+    transform: translateY(1px);
+}
