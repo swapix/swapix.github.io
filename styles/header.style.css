@@ -14,11 +14,11 @@
 }
 
 .navbar-toggler {
-    border-color: transparent; /* Durchsichtiger Toggle-Button-Rahmen */
+    border-color: transparent;
+    color: #ffffff; /* Durchsichtiger Toggle-Button-Rahmen */
 }
 
-.navbar-toggler-icon {
-    background-color: #000; /* Farbe des Navbar-Toggle-Icons */
+.navbar-toggler-icon { /* Farbe des Navbar-Toggle-Icons */
 }
 
 .navbar-nav {
