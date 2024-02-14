@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="/styles/index.style.css"> 
-    <link rel="stylesheet" href="/styles/sidebar.style.css"> 
     <link rel="stylesheet" href="/styles/footer.style.css"> 
     <link rel="stylesheet" href="/styles/header.style.css"> 
+    <link rel="stylesheet" href="/styles/animations.style.css"> 
     <link rel="stylesheet" href="/styles/featurebox.style.css"> 
     <link rel="stylesheet" href="/styles/hero.style.css"> 
     <link rel="stylesheet" href="/styles/caroussel_sub.style.css"> 
+    <link rel="stylesheet" href="/styles/login_container.style.css"> 
     <!-- Slick Carousel Stylesheets -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -31,25 +32,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts/index.script.js"></script>
+    <script src="/scripts/login.script.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-white">
         <div class="container">
-            <!-- Brand Logo -->
             <a class="navbar-brand" href="/">
                 <img src="/media/icons/logo.png" alt="SwapiX Logo" class="svg-logo">
                 <a class="navbar-brand">SwapiX -<small> Register</small></a>
             </a>
-            <!-- Navbar Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon dark"></span>
             </button>
-            <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -65,6 +62,39 @@
             </div>
         </div>
     </nav>
+    <div class="login-container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <img src="/media/icons/logo.png" alt="SwapiX Logo" class="logo">
+                        </div>
+                        <h2 class="card-title text-center mb-4">Register</h2>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" id="birthdate" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-block btn-primary mt-auto">Register</button>
+                        </form>
+                        <div class="text-center mt-4" id="message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <footer>
     <div class="footer-content">
