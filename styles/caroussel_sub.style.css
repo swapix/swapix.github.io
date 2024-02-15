@@ -76,6 +76,9 @@
     animation: pulse 1s infinite alternate; /* Animation */
 }
 
+.card-header p{
+    color:#afafaf;
+}
 
 @keyframes pulse {
     0% {

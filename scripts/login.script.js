@@ -9,25 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
             userName: username,
             password: password
         };
-    
-        fetch('https://k0b32llp-7230.euw.devtunnels.ms/api/v1/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(requestData)
-        })
-        .then(response => {
-            if (response.ok) {
-                document.getElementById("message").innerText = "Login successful!";
-            } else {
-                response.json().then(data => {
-                    document.getElementById("message").innerText = "Login failed: " + data.message;
-                });
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://mutual-loved-filly.ngrok-free.app/api/v1/auth/login", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    document.getElementById("message").innerText = "Login successful!";
+                } else {
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById("message").innerText = "Login failed: " + response.message;
+                }
             }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        };
+
+        xhr.send(JSON.stringify(requestData));
     });
 });
