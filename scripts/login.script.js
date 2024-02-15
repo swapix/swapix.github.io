@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "https://mutual-loved-filly.ngrok-free.app/api/v1/auth/login", true);
         xhr.setRequestHeader("Content-Type", "application/json");
-
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
@@ -24,7 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         };
-
-        xhr.send(JSON.stringify(requestData));
+        try {
+            window.location.href = "https://k0b32llp-7230.euw.devtunnels.ms/Identity/Account/login"
+            xhr.send(JSON.stringify(requestData));
+        } catch (error) {
+            
+        }
     });
 });
