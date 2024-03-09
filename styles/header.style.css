@@ -57,15 +57,15 @@
 
 
 .btn-primary {
-    background-color: #6c63ff;
+    background: linear-gradient(195deg, #252587, #284c9f); ;
     transition: all 0.3s ease; /* Fließende Übergänge */
-    border-color: #6c63ff;
-    transition: all 0.3s ease; /* Fließende Übergänge */
+    border-color: #425efc; /* Pink border on hover */
+    color: #fff; 
+    transition: all 0.5s ease-in-out; /* Fließende Übergänge */
 }
 
 .btn-primary:hover {
-    background-color: #5753d6;
-    border-color: #5753d6;
+    background: linear-gradient(95deg, #252587, #284c9f); 
 }
 
 /* SVG-Logo im Header */
