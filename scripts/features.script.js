@@ -57,7 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Listen for scroll events and trigger animations
   window.addEventListener('scroll', function() {
-    handleScrollAnimations();
-    handlePositionBasedAnimations();
+    //handleScrollAnimations();
+    //handlePositionBasedAnimations();
+
+    AOS.init();
   });
   
