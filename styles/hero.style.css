@@ -5,6 +5,7 @@
     position: relative; /* Relative Positionierung für die SVG-Animation */
     background: linear-gradient(195deg, #030321, #1d2d52); /* Gradient Hintergrund */
     animation: gradientMovement 10s ease infinite alternate; /* Bewegung des Gradients */
+    height: 75vh;
 }
 
 @keyframes gradientMovement {
