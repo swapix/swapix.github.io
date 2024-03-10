@@ -11,6 +11,21 @@
     animation: fadeIn 1s ease forwards;
 }
 
+.btn-features{
+      color: #363636; /* Black text color */
+      border-color: #3d3d3d; /* White button border */
+      padding: 8px 20px; /* Button padding */
+      border-radius: 5px; /* Rounded corners */
+      transition: all 0.3s ; 
+      font-weight: bold; /* Bold font weight */
+}
+
+.btn-features:hover{
+      color: #1c1c1c; /* Black text color */
+      border-color: #252525; /* White button border */
+    background-color: white;
+}
+
 .feature-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);

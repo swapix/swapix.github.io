@@ -13,24 +13,39 @@
       display: flex; 
 }
 
-.background-chart {
+.background-animation {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent; /* Transparent background for layering */
-  overflow: hidden; /* Clip overflowing content */
 }
 
-.background-chart path {
-  fill: none; /* Remove fill for outline */
-  stroke: #fff; /* White stroke for chart lines */
-  stroke-width: 2; /* Line thickness */
-  stroke-linecap: round; /* Rounded line ends */
-  animation: chartAnimation 5s ease-in-out infinite; /* Animation for chart movement */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
+.chart-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stretch image to fill container */
+  filter: blur(70px); /* Add blur effect */
+  opacity: 0.1; 
+  animation: gradientMovement  10s ease infinite alternate;/* Reduce opacity for a faded look */
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(195deg, #030321, #1d2d52);
+}
 @keyframes gradientMovement {
     0% {
         background-position: 0% 50%;
@@ -66,10 +81,10 @@
     color: #00C8FF; /* Blue to pink */
   }
   50% {
-    color: #FC427B; /* Pink */
+    color: #2d42ad; /* Pink */
   }
   100% {
-    color: #00C8FF; /* Pink to blue */
+    color: #a4d9e8; /* Pink to blue */
   }
 }
 
