@@ -21,12 +21,17 @@
 }
 
 .btn-features:hover{
-      color: #1c1c1c; /* Black text color */
-      border-color: #252525; /* White button border */
+    color: #1c1c1c; /* Black text color */
+    border-color: #252525; /* White button border */
     background-color: white;
+}
+
+.feature-content:hover{
+     color: rgb(37, 37, 38);
 }
 
 .feature-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 48, 78);
 }

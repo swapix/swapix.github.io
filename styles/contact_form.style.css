@@ -2,7 +2,9 @@ body {
     background-image: url("/media/backgrounds/telephone_stock.jpg");
     background-size: cover;
     backdrop-filter: blur(10px);
+    height: 95vh;
     overflow: hidden;
+    animation: fadInUp 1s linear;
 }
 .contact-form {
     background-color: #fff;
@@ -40,6 +42,7 @@ body {
 .contact-form button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
