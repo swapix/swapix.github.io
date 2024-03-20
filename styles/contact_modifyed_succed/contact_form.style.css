@@ -1,0 +1,97 @@
+body {
+    background-image: url("/media/backgrounds/telephone_stock.jpg");
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    overflow: hidden;
+    z-index: 5;
+    
+    animation: fadInUp 1s linear;
+}
+.contact-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    animation: fadeInUp 1s ease forwards;
+    margin: 0 auto;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-bottom-color: #007bff;
+}
+.contact-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#professional-checkmark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight opacity */
+    border: 2px solid #ddd; /* Light border for definition */
+    border-radius: 5px; /* Subtler rounded corners */
+    padding: 30px;
+    text-align: center;
+    display: none;
+    z-index: 9999;
+  }
+  
+  #professional-checkmark p {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333; /* Darker text for better legibility */
+  }
+  
+  .check {
+    animation: checkmark 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes checkmark {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+  }
+  
