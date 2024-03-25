@@ -2,13 +2,13 @@
     font-weight: bold;
     color: #000; /* Schwarze Schriftfarbe */
 }
-
 .navbar 
 {
     transition: background-color 0.3s ease;
     width: 100%;
     z-index: 1000;
     display: flex;
+    position:  fixed;
     align-items: baseline;
     background-color: #fff; /* Weiße Hintergrundfarbe */
     box-decoration-break: 0 4px 4px rgba(0, 0, 0, 0.1); /* Schatten */

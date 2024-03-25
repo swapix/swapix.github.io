@@ -1,0 +1,142 @@
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -510px; /* Initially hidden off-screen */
+    width: 500px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1000; /* Ensure it appears above other content */
+    transition: all 0.3s ease; /* Smooth transition for sliding in */
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.side-panel.show {
+    margin: 10px;
+    right: 0;
+}
+
+.panel-content {
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    border-radius: 10px;
+    padding: 5px,10px;
+    top: 10px;
+    right: 10px;
+    margin-top: 10px;
+    border: none;
+    background: none;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.message-details-side {
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.message-details-side h3 {
+    margin-bottom: 5px;
+    font-size: 16px; 
+}
+
+.message-details-side p {
+    margin: 5px 0;
+}
+
+.message-info {
+    flex: 1;
+}
+
+.message-content {
+    margin-bottom: 15px;
+}
+
+.message-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #5f7fff;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.message-info {
+    flex: 1;
+}
+
+.message-content {
+    margin-bottom: 15px;
+}
+
+.message-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.bottom-toolbar {
+    position: fixed;
+    bottom: 0;
+    border-radius: 10px;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* White background */
+    border-top: 1px solid #eee;
+    display: block;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.close-button:hover {
+    color: #333;
+    background-color: aliceblue;
+}
+
+.sidebar-profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.sidebar-profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action-button {
+    background-color: #ffffff; /* Button background color */
+    color: #1f1f1f; /* Button text color */
+    border: none;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.action-button:hover{
+    background-color: #d9e2fc;
+    color: #6a95e1;
+}
+
+.action-button i{
+    margin-right:  5px;
+}

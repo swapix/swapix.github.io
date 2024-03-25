@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/styles/animations.style.css"> 
     <link rel="stylesheet" href="/styles/account/account-maincontent.style.css"> 
     <link rel="stylesheet" href="/styles/account/pages/profile.style.css"> 
+    <link rel="stylesheet" href="/styles/account/sidebar.style.css"> 
     <link rel="stylesheet" href="/styles/component_colors.css"> 
     <link rel="stylesheet" href="/styles/account/account-sidebar.style.css">
     <link rel="stylesheet" href="/styles/dialogs/accunt-picture.style.css">
@@ -119,11 +120,11 @@
 
     
     
-    <div class="sidebar">
+    <div class="sidebar ">
         <div class="sidebar-header">
         </div>
-        <div class="user-info">
-            <div class="user-profile" onclick="profilePictureDialog.open()">
+        <div class="user-info ">
+            <div class="user-profile " onclick="profilePictureDialog.open()">
                 <img id="account-picture" alt="Profile Picture">
                 <div class="user-details">
                     <h5 id="account-name">User Name</h5>
@@ -131,7 +132,7 @@
                 </div>
             </div>
         </div>
-        <ul class="menu">
+        <ul class="menu ">
             <li>
                 <a class="menu-item" onclick="showSection('profile')">
                     <i class="far fa-user-circle"></i>
@@ -170,7 +171,7 @@
     </div>
 
 
-    <div class="content" id="main-content">
+    <div class="content " id="main-content">
     <div id="backdrop" class="backdrop"></div>
         <div class="section profile" id="profile">
             <div class="gradient-section">
@@ -178,7 +179,7 @@
                     <h1 id="account-greeting">Hey,</h1>
                     <p>Did we miss something?</p>
                 </div>
-                <div class="user-info">
+                <div class="user-info ">
                     <table>
                         <tr>
                             <td>Email</td>
@@ -229,8 +230,6 @@
             <div class="notification-table" id="notification-table">
                 
             </div>
-            <div class="side-panel" id="message-side-panel">
-            </div>
         </div>
         
         
@@ -244,6 +243,9 @@
             <h2>Your Suzbscriptions</h2>
             <p>Activity log content...</p>
         </div>
+    </div>
+    <div class="side-panel" id="message-side-panel">
+        <!-- Content of the side panel goes here -->
     </div>
 
 </body>

@@ -11,10 +11,6 @@
     margin-right: 20px; /* Add margin to create space between the table and side panel */
 }
 
-.side-panel {
-    width: 300px; /* Adjust width as needed */
-    /* Other styling properties for the side panel */
-}
 
 .notification-table {
     width: 100%;
