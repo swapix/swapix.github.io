@@ -11,9 +11,20 @@
 .section {
     display: none;
     padding: 20px;
+    animation: slideIn 0.5s forwards; /* Animation for sliding in */
 }
 
-/* Show the section */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Start position: 50px below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position: No translation */
+    }
+}
+
 .section.active {
     display: block;
 }

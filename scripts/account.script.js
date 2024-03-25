@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("account-table-email").innerText = "" + data.email;
             document.getElementById("account-table-username").innerText = "@" + data.userName;
             document.getElementById("account-table-civilname").innerText = "" + data.firstName + " " + data.lastName;
+            document.getElementById("account-table-resident").innerText = "" + data.location;
+            document.getElementById("account-table-telephone").innerText = "" + data.phoneNumber ?? "N/A";
+            document.getElementById("account-table-twofa").innerText = "" + data.twoFactorEnabled ?? "N/A";
             document.getElementById("account-greeting").innerText = "Hey, " + data.firstName ; 
         })
         .catch(error => {

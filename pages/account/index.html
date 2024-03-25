@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/styles/account/pages/profile.style.css"> 
     <link rel="stylesheet" href="/styles/component_colors.css"> 
     <link rel="stylesheet" href="/styles/account/account-sidebar.style.css">
+    <link rel="stylesheet" href="/styles/dialogs/accunt-picture.style.css">
     <link rel="stylesheet" href="/styles/dialogs/edit.style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -35,6 +36,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/scripts/navbar.script.js"></script>
+    <script src="/scripts/account-picture.dialog.script.js"></script>
     <script src="/scripts/cookies.script.js"></script>
     <link rel="stylesheet" href="/styles/loader/spinner.style.css">
     <script src="/scripts/account.script.js"></script>
@@ -54,6 +56,18 @@
         </div>
     </div>
     <div id="modal-overlay" class="modal-overlay"></div>
+    <div id="profilePictureDialog" class="dialog">
+        <div class="dialog-content">
+            <h2>Change Profile Picture</h2>
+            <input type="file" id="profilePictureInput" accept="image/*" onchange="previewProfilePicture(event)">
+            <div id="previewContainer" class="preview-container"></div>
+            <div class="button-container">
+                <button onclick="cancelProfilePictureChange()">Cancel</button>
+                <button onclick="saveProfilePicture()">Save</button>
+            </div>
+        </div>
+    </div>
+
 
     <nav class="navbar navbar-white navbar-expand-lg">
         <a class="navbar-brand" href="/">
@@ -92,7 +106,7 @@
         <div class="sidebar-header">
         </div>
         <div class="user-info">
-            <div class="user-profile">
+            <div class="user-profile" onclick="openProfilePictureDialog()">
                 <img id="account-picture" alt="Profile Picture">
                 <div class="user-details">
                     <h5 id="account-name">User Name</h5>
@@ -131,12 +145,15 @@
             <button class="logout-button" onclick="logoutFromMain()">Log Out</button>
         </div>
     </div>
+
+
     <div class="content" id="main-content">
+    <div id="backdrop" class="backdrop"></div>
         <div class="section profile" id="profile">
             <div class="gradient-section">
                 <div class="greeting">
                     <h1 id="account-greeting">Hey,</h1>
-                    <p>Here's your information:</p>
+                    <p>Did we miss something?</p>
                 </div>
                 <div class="user-info">
                     <table>
@@ -159,6 +176,16 @@
                             <td>Resident</td>
                             <td id="account-table-resident">[User's Name]</td>
                             <td><button onclick="openDialog('resident')">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Telephone</td>
+                            <td id="account-table-telephone">[User's Name]</td>
+                            <td><button onclick="openDialog('telephone')">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Two-Factor Authentication</td>
+                            <td id="account-table-twofa">[User's Name]</td>
+                            <td><button onclick="openDialog('telephone')">Edt</button></td>
                         </tr>
                     </table>
                 </div>
