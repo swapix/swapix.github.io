@@ -1,33 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    if(getCookie("swpKey") != null && getCookie("profileID") != null){
+        window.location.href = "/pages/account/"
+    }
+
     document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();
         
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
     
-        var requestData = {
+        var raw =  {
             userName: username,
             password: password
         };
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://mutual-loved-filly.ngrok-free.app/api/v1/auth/login", true);
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    document.getElementById("message").innerText = "Login successful!";
-                } else {
-                    var response = JSON.parse(xhr.responseText);
-                    document.getElementById("message").innerText = "Login failed: " + response.message;
-                }
+        const dataBlob = new Blob([JSON.stringify(raw)], {
+            type: "application/json"
+       });
+        
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("content-type", "application/json");
+        const requestOptions = {
+            method: "POST",
+            content: "application/json",
+            headers: myHeaders,
+            header: myHeaders,
+            body: JSON.stringify(raw),
+            redirect: "follow"
+          };
+
+          fetch("https://mutual-loved-filly.ngrok-free.app/api/v1/auth/login", requestOptions)
+          .then(response => {
+            if (response.ok) {
+              return response.json();
+            } else {
+              throw new Error("Login failed: " + response.body);
             }
-        };
-        try {
-            window.location.href = "https://k0b32llp-7230.euw.devtunnels.ms/Identity/Account/login"
-            xhr.send(JSON.stringify(requestData));
-        } catch (error) {
-            
-        }
-    });
+          })
+          .then(data => {
+            document.getElementById("message").innerText = "Login successful!";
+            console.log(data);
+            setCookie("swpKey",data.apiKey,)
+            setCookie("profileID",data.userId,)
+            window.location.href = "/pages/account/"
+          })
+          .catch(error => {
+            document.getElementById("message").innerText = error;
+            console.error(error);
+          });
+        });
 });

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og:https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SwapiX - Where Traders meet!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="The only social media plattform on the market from traders for traders and all that want to start!">
+    <meta property="og:url" content="https://core.swapix.fun/" />
+    <meta property="og:image" content="https://core.swapix.fun/media/icons/logo.png" />
+    <meta property="og:site_name" content="SwapiX" />
+    <meta property ="twitter:card" content ="summary_large_image"/>
+    <meta property ="twitter:url" content ="https://core.swapix.fun"/>
+    <meta property ="twitter:title" content ="SwapiX - Where Traders meet!"/>
+    <meta property ="twitter:description" content ="The only social media plattform on the market from traders for traders and all that want to start!"/>
+    <meta property ="twitter:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1711235160/qlisyhr0blxwb2k9xr5v.png"/>
+    <meta property ="og:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1711235160/qlisyhr0blxwb2k9xr5v.png" />
+    <title>SwapiX - Account</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/styles/footer.style.css"> 
+    <link rel="stylesheet" href="/styles/account/account-header.style.css"> 
+    <link rel="stylesheet" href="/styles/animations.style.css"> 
+    <link rel="stylesheet" href="/styles/component_colors.css"> 
+    <link rel="stylesheet" href="/styles/account/account-sidebar.style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts/navbar.script.js"></script>
+    <script src="/scripts/cookies.script.js"></script>
+    <script src="/scripts/account.script.js"></script>
+    <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
+</head>
+<body>
+    <nav class="navbar navbar-white navbar-expand-lg">
+        <a class="navbar-brand" href="/">
+            <img src="/media/icons/logo.png" alt="SwapiX Logo" class="svg-logo">
+            SwapiX - <small >Account</small>
+        </a>
+        <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler white"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/account/direct/">Notifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/account/settings/">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary btn-account" href="/pages/login/">Web App</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <small id="account-phrase">Hey, </small>
+            <button class="logout-button">Log Out</button>
+        </div>
+        <div class="user-info">
+            <div class="user-profile">
+                <img id="account-picture" alt="Profile Picture">
+                <div class="user-details">
+                    <h5 id="account-name">User Name</h5>
+                    <p id="account-email">Email Address</p>
+                    <p id="account-status">Status</p>
+                </div>
+            </div>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="#profile" class="menu-item">
+                    <i class="far fa-user-circle"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#settings" class="menu-item">
+                    <i class="fas fa-cogs"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#notifications" class="menu-item">
+                    <i class="far fa-bell"></i>
+                    <span>Notifications</span>
+                </a>
+            </li>
+            <li>
+                <a href="#activity-log" class="menu-item">
+                    <i class="fas fa-history"></i>
+                    <span>Activity Log</span>
+                </a>
+            </li>
+            <!-- Additional menu items can be added here -->
+        </ul>
+        <div class="logout">
+            <button class="logout-button">Log Out</button>
+        </div>
+    </div>
+
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <!-- Existing navigation bar remains the same -->
+
+        <!-- Updated container to include modern account features -->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- New section for profile information -->
+                <div class="col-md-4" id="profile">
+                    <!-- Profile card -->
+                    <div class="card">
+                        <div class="card-header">
+                            Profile Information
+                        </div>
+                        <div class="card-body">
+                            <!-- Add content for profile -->
+                            <button class="toggle-button" onclick="toggleContent('profile')">Toggle</button>
+                            <p class="content">Name: [User's Name]</p>
+                            <p class="content">Email: [User's Email]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New section for account settings -->
+                <div class="col-md-4" id="settings">
+                    <!-- Account settings card -->
+                    <div class="card">
+                        <div class="card-header">
+                            Account Settings
+                        </div>
+                        <div class="card-body">
+                            <!-- Add content for account settings -->
+                            <button class="toggle-button" onclick="toggleContent('settings')">Toggle</button>
+                            <p class="content">Settings content...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New section for notifications -->
+                <div class="col-md-4" id="notifications">
+                    <!-- Notifications card -->
+                    <div class="card">
+                        <div class="card-header">
+                            Notifications
+                        </div>
+                        <div class="card-body">
+                            <!-- Add content for notifications -->
+                            <button class="toggle-button" onclick="toggleContent('notifications')">Toggle</button>
+                            <p class="content">Notifications content...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New section for activity log -->
+                <div class="col-md-4" id="activity-log">
+                    <!-- Activity log card -->
+                    <div class="card">
+                        <div class="card-header">
+                            Activity Log
+                        </div>
+                        <div class="card-body">
+                            <!-- Add content for activity log -->
+                            <button class="toggle-button" onclick="toggleContent('activity-log')">Toggle</button>
+                            <p class="content">Activity log content...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

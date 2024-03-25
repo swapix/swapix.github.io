@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Event listener for the form submission
+    
     document.querySelector('form').addEventListener('submit', function(event) {
       event.preventDefault();
   
@@ -41,4 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
   });
+
+  window.onloadTurnstileCallback = function () {
+    turnstile.render('contact-form', {
+        sitekey: '0x4AAAAAAAVhRbrgJbIn7Soc',
+        callback: function(token) {
+            console.log(`Challenge Success ${token}`);
+        },
+    });
+};
   

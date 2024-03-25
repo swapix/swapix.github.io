@@ -32,6 +32,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
     <script src="/scripts/contact.script.js"></script>
 
     <!-- Favicon -->
@@ -83,6 +84,9 @@
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAVhRbrgJbIn7Soc" data-callback="javascriptCallback"></div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Submit</button>
                     </form>

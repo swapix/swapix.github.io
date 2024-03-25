@@ -1,0 +1,125 @@
+/* Updated sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; /* Adjust as needed */
+    overflow: hidden; /* Hide overflowing content */
+    background-color: #fff; /* White background color */
+    border-right: 1px solid #eee; /* Add a solid border to the right */
+    border-radius: 20px; /* Add rounded edges */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.sidebar-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logout-button {
+    background-color: #f32e2e; /* Red button color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.logout-button:hover {
+    background-color: #e60000; /* Darker red on hover */
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #eaf1ff; /* Light blue background on hover */
+}
+
+.menu-item i {
+    margin-right: 15px;
+    font-size: 20px; /* Increased icon size */
+}
+
+.menu-item span {
+    flex-grow: 1;
+}
+
+
+.menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.main-content {
+    margin-left: 250px; /* Adjust based on the width of the sidebar */
+    padding-top: 60px; /* Ensure content starts below the header navbar */
+}
+
+/* Always show the navbar brand */
+.navbar-brand {
+    display: block;
+}
+
+/* Adjustments for menu when collapsed */
+.menu-collapsed li a span {
+    display: none; /* Hide text when collapsed */
+}
+.logout {
+    margin-top: auto;
+    padding: 20px;
+}
+
+.logout-button {
+    background-color: #4caf50; /* Green button color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.user-info {
+    padding: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-details h4, .user-details p {
+    margin: 0;
+}

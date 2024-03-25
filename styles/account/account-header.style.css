@@ -1,8 +1,6 @@
 .navbar-brand {
     font-weight: bold;
-    align-self: flex-start;
     color: #000; /* Schwarze Schriftfarbe */
-    margin-right: auto; /* Align the logo to the left */
 }
 
 .navbar 
@@ -10,9 +8,10 @@
     transition: background-color 0.3s ease;
     width: 100%;
     z-index: 1000;
-    
+    display: flex;
+    align-items: baseline;
     background-color: #fff; /* Weiße Hintergrundfarbe */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Schatten */
+    box-decoration-break: 0 4px 4px rgba(0, 0, 0, 0.1); /* Schatten */
     border-bottom: 1px solid #eee; /* Unterstrich */
 }
 
@@ -21,12 +20,12 @@
     color: #ffffff; /* Durchsichtiger Toggle-Button-Rahmen */
 }
 
-.navbar-toggler-icon { /* Farbe des Navbar-Toggle-Icons */
-}
 
 .navbar-nav {
-    text-align: center;
+    text-align: right;
+    margin-left: auto;
 }
+
 
 .nav-item {
     margin: 0 10px;

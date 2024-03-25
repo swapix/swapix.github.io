@@ -2,15 +2,17 @@
 function setCookie(name, value, expirationDays, domain) {
     var cookieString = name + "=" + encodeURIComponent(value);
     if (expirationDays) {
-        var date = new Date();
-        date.setTime(date.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
-        cookieString += "; expires=" + date.toUTCString();
+      var date = new Date();
+      date.setTime(date.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
+      cookieString += "; expires=" + date.toUTCString();
     }
     if (domain) {
-        cookieString += "; domain=" + domain;
+      cookieString += "; domain=" + domain;
     }
+    cookieString += "; path=/"; // Set path to /
     document.cookie = cookieString;
-}
+   }
+   
 
 // Function to get a cookie
 function getCookie(name) {
