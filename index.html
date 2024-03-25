@@ -7,7 +7,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="The only social media plattform on the market from traders for traders and all that want to start!">
     <meta property="og:url" content="https://core.swapix.fun/" />
-    <meta property="og:image" content="https://core.swapix.fun/media/icons/logo.png" />
     <meta property="og:site_name" content="SwapiX" />
     <meta property ="twitter:card" content ="summary_large_image"/>
     <meta property ="twitter:url" content ="https://core.swapix.fun"/>
@@ -27,6 +26,7 @@
     <link rel="stylesheet" href="/styles/component_colors.css"> 
     <link rel="stylesheet" href="/styles/hero.style.css"> 
     <link rel="stylesheet" href="/styles/side_button.style.css">
+    <link rel="stylesheet" href="/styles/loader/spinner.style.css">
     <link rel="stylesheet" href="/styles/caroussel_sub.style.css"> 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -40,7 +40,7 @@
     <script src="scripts/cookies.script.js"></script>
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
-<body>
+<body class="loaded loaded-hidden">
 
     <nav class="navbar navbar-expand-lg navbar-white">
         <div class="container">
@@ -61,13 +61,19 @@
                         <a class="nav-link" href="https://github.com/JW-Limited">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary btn-account" href="/pages/login/">Start Now!</a>
+                        <a class="btn btn-primary btn-account" id="header-account-button" href="/pages/login/">Start Now!</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    <div id="loader-overlay">
+        <div class="loader">
+            <div class="spinner"></div>
+        </div>
+        
+        <p class="loading-text">Hey, welcome again!</p>
+    </div>
     <section class="hero-section animate__animated animate__fadeIn">
         <div class="background-animation">
             <img src="/media/backgrounds/running_charts.jpg" alt="Chart background image" class="chart-image">
@@ -75,9 +81,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 hero-content">
-                        <h1>Welcome to <span class="swapix-text">SwapiX</span></h1>
-                        <p>A revolutionary platform for connecting trading enthusiasts.</p>
-                        <a href="/pages/register/" class="btn btn-joinNOW">Join the Community</a>
+                        <h1 id="hero-welcome-big">Welcome to 
+                            <span class="swapix-text" id="hero-animated-text">SwapiX</span>
+                        </h1>
+                        <p id="hero-big-description">A revolutionary platform for connecting trading enthusiasts.</p>
+                        <a href="/pages/register/" class="btn btn-joinNOW" id="hero-actionbutton-join">Join the Community</a>
                         <a href="/pages/features/" class="btn btn-explore">Explore SwapiX</a>
                       </div>
                 <div class="col-md-6 text-right">

@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
 
     if(getCookie("swpKey") != null && getCookie("profileID") != null){
         window.location.href = "/pages/account/"
     }
 
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
+    document.getElementById("loginForm").addEventListener("submit", async function(event) {
         event.preventDefault();
         
         var username = document.getElementById("username").value;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             redirect: "follow"
           };
 
-          fetch("https://mutual-loved-filly.ngrok-free.app/api/v1/auth/login", requestOptions)
+          await fetch("https://mutual-loved-filly.ngrok-free.app/api/v1/auth/login", requestOptions)
           .then(response => {
             if (response.ok) {
               return response.json();
