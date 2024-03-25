@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = "/pages/login/"
     }
 
-    
+    closeDialog()
     const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("content-type", "application/json");
@@ -74,7 +74,15 @@ function logoutFromMain(){
     window.location.href = "/"
 }
 function openDialog(field) {
-    // Logic to open dialog for editing the specified field
-    console.log("Editing " + field);
-    // Example: Open a modal or prompt for editing the field
+    var dialog = document.getElementById('edit-dialog');
+    var overlay = document.getElementById('modal-overlay');
+    dialog.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+function closeDialog() {
+    var dialog = document.getElementById('edit-dialog');
+    var overlay = document.getElementById('modal-overlay');
+    dialog.style.display = 'none';
+    overlay.style.display = 'none';
 }

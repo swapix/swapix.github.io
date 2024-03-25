@@ -1,5 +1,5 @@
 .gradient-section {
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from left to right */
+    background: linear-gradient(to right, #252587, #284c9f); /* Gradient from left to right */
     border-radius: 20px;
     padding: 20px;
     height: 200px; /* Minimum height */
@@ -26,13 +26,14 @@
 
 .user-info button {
     background-color: #fff; /* White background */
-    color: #ff7e5f; /* Gradient color */
+    color: #5f7fff; /* Gradient color */
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.5s ease; /* Smooth transition */
 }
 
 .user-info button:hover {
-    background-color: #feb47b; /* Hover background color */
+    background-color: #e2e4ff; /* Hover background color */
 }

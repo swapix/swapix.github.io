@@ -1,0 +1,57 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 900; /* Ensure it's behind the dialog */
+    display: none; /* Initially hidden */
+}
+
+.edit-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* White background for the dialog */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.dialog-content {
+    color: #000; /* Black text color */
+}
+
+.edit-dialog h2 {
+    margin-bottom: 20px;
+}
+
+.edit-dialog form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.edit-dialog form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Add a border */
+    margin-bottom: 20px;
+}
+
+.edit-dialog form button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5f8aff;
+    color: #fff; /* White text color */
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-dialog form button:hover {
+    background-color: #7bbcfe;
+}

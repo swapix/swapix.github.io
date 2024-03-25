@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/styles/account/pages/profile.style.css"> 
     <link rel="stylesheet" href="/styles/component_colors.css"> 
     <link rel="stylesheet" href="/styles/account/account-sidebar.style.css">
+    <link rel="stylesheet" href="/styles/dialogs/edit.style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -41,6 +42,19 @@
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body>
+    <div id="edit-dialog" class="edit-dialog">
+        <div class="dialog-content">
+            <h2>Edit Information</h2>
+            <form id="edit-form">
+                <label for="edit-value">New Value:</label>
+                <input type="text" id="edit-value" name="edit-value" placeholder="Enter new value">
+                <button type="submit">Save</button>
+                <button type="button" onclick="closeDialog()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <div id="modal-overlay" class="modal-overlay"></div>
+
     <nav class="navbar navbar-white navbar-expand-lg">
         <a class="navbar-brand" href="/">
             <img src="/media/icons/logo.png" alt="SwapiX Logo" class="svg-logo">
@@ -71,6 +85,7 @@
         
         <p class="loading-text">Something great is coming...</p>
     </div>
+
     
     
     <div class="sidebar">
