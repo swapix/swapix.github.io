@@ -1,0 +1,103 @@
+.section-header {
+    background: linear-gradient(to right, #252587, #284c9f);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.notification-table {
+    flex: 1 0 auto; /* Take available space but don't shrink or grow */
+    margin-right: 20px; /* Add margin to create space between the table and side panel */
+}
+
+.side-panel {
+    width: 300px; /* Adjust width as needed */
+    /* Other styling properties for the side panel */
+}
+
+.notification-table {
+    width: 100%;
+}
+
+.notification-row {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.notification-row:hover {
+    background-color: #f7f7f7; 
+}
+
+.message-author {
+    font-size: 14px;
+    color: #777;
+}
+
+.message-preview {
+    font-size: 12px;
+    color: #777; 
+}
+
+.notification-time {
+    margin-right: 20px;
+}
+
+.notification-badge {
+    background: linear-gradient(195deg, #252587, #284c9f);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.notification-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.notification-info:hover {
+    background-color: #f7f7f7; 
+}
+
+.message-details {
+    margin-left: 10px;
+}
+
+
+
+.notification-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-details h3 {
+    margin-bottom: 5px;
+    font-size: 16px; 
+}
+
+.message-author {
+    font-size: 14px; 
+    color: #666;
+}
+
+
+.notification-time {
+    margin-right: 20px;
+    color:#666;
+}
+
+

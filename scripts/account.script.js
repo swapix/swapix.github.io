@@ -1,6 +1,6 @@
 const requestURL = "https://mutual-loved-filly.ngrok-free.app/api/v1/";
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded',async function() {
 
     if(getCookie("swpKey") == null || getCookie("profileID") == null){
         window.location.href = "/pages/login/"
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
        
 
-        fetch(requestURL + "trader/" + getCookie("profileID") + "?apiKey=" + getCookie("swpKey"), requestOptions)
+        await fetch(requestURL + "trader/" + getCookie("profileID") + "?apiKey=" + getCookie("swpKey"), requestOptions)
         .then(response => {
             if (response.ok) {
               return response.json();
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error(error);
         }); 
         
-        fetch(requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID") , requestOptions)
+        await fetch(requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID") , requestOptions)
         .then(response => {
             if (response.ok) {
               return response;
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 document.body.classList.add('loaded-hidden');
                 showSection('profile');
+                generateNotificationRows(notificationData);
             }, 500);
         }, 2000);
     });

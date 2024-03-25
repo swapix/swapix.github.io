@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="/styles/account/account-sidebar.style.css">
     <link rel="stylesheet" href="/styles/dialogs/accunt-picture.style.css">
     <link rel="stylesheet" href="/styles/dialogs/edit.style.css">
+    <link rel="stylesheet" href="/styles/account/pages/notifications.style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -37,6 +38,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/scripts/navbar.script.js"></script>
     <script src="/scripts/account-picture.dialog.script.js"></script>
+    <script src="/scripts/account/notification.fetch.script.js"></script>
     <script src="/scripts/cookies.script.js"></script>
     <link rel="stylesheet" href="/styles/loader/spinner.style.css">
     <script src="/scripts/account.script.js"></script>
@@ -149,9 +151,15 @@
                 </a>
             </li>
             <li>
-                <a  class="menu-item" onclick="showSection('activity-log')"> 
-                    <i class="fas fa-history"></i>
-                    <span>Activity Log</span>
+                <a class="menu-item" onclick="showSection('integrations')"> 
+                    <i class="fas fa-user-friends"></i>
+                    <span>Integrations</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu-item" onclick="showSection('subscriptions')"> 
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>Subscriptions</span>
                 </a>
             </li>
             <!-- Additional menu items can be added here -->
@@ -200,7 +208,7 @@
                         <tr>
                             <td>Two-Factor Authentication</td>
                             <td id="account-table-twofa">[User's Name]</td>
-                            <td><button onclick="openDialog('telephone')">Edt</button></td>
+                            <td><button onclick="openDialog('telephone')">Edit</button></td>
                         </tr>
                     </table>
                 </div>
@@ -214,12 +222,26 @@
         </div>
 
         <div class="section" id="notifications">
-            <h2>Notifications</h2>
-            <p>Notifications content...</p>
+            <div class="section-header">
+                <h2>Inbox</h2>
+                <p>See what's happening</p>
+            </div>
+            <div class="notification-table" id="notification-table">
+                
+            </div>
+            <div class="side-panel" id="message-side-panel">
+            </div>
         </div>
+        
+        
+        
 
-        <div class="section" id="activity-log">
-            <h2>Activity Log</h2>
+        <div class="section" id="integrations">
+            <h2>Broker</h2>
+            <p>Activity log content...</p>
+        </div>
+        <div class="section" id="subscriptions">
+            <h2>Your Suzbscriptions</h2>
             <p>Activity log content...</p>
         </div>
     </div>
