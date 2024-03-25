@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.getElementById("account-name").innerText = "" + data.firstName;
             document.getElementById("account-email").innerText = "" + data.email;
+            document.getElementById("account-table-email").innerText = "" + data.email;
+            document.getElementById("account-table-username").innerText = "@" + data.userName;
+            document.getElementById("account-table-civilname").innerText = "" + data.firstName + " " + data.lastName;
+            document.getElementById("account-greeting").innerText = "Hey, " + data.firstName ; 
         })
         .catch(error => {
             console.error(error);
@@ -68,4 +72,9 @@ function logoutFromMain(){
     deleteCookie("swpKey")
     deleteCookie("profileID")
     window.location.href = "/"
+}
+function openDialog(field) {
+    // Logic to open dialog for editing the specified field
+    console.log("Editing " + field);
+    // Example: Open a modal or prompt for editing the field
 }

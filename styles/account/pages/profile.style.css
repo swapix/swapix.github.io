@@ -1,49 +1,38 @@
-.profile-section {
-    background-color: #f8f9fa; /* Light background color */
+.gradient-section {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from left to right */
+    border-radius: 20px;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    height: 200px; /* Minimum height */
 }
 
-.profile-header {
-    display: flex;
-    align-items: center;
+.greeting {
+    color: #fff; /* White text color */
+    margin-bottom: 20px;
 }
 
-.profile-picture img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Circular profile picture */
-    object-fit: cover;
-    object-position: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: 4px solid #fff; /* White border */
+.user-info table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.profile-info {
-    margin-left: 20px;
+.user-info td {
+    padding: 10px;
+    border-bottom: 1px solid #fff; /* White border */
 }
 
-.profile-name {
-    font-size: 24px;
-    color: #333; /* Dark text color */
-    margin-bottom: 5px;
+.user-info td:last-child {
+    text-align: center;
 }
 
-.profile-email,
-.profile-location,
-.profile-bio,
-.profile-website {
-    font-size: 16px;
-    color: #666; /* Medium text color */
-    margin-bottom: 5px;
+.user-info button {
+    background-color: #fff; /* White background */
+    color: #ff7e5f; /* Gradient color */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.profile-website a {
-    color: #007bff; /* Link color */
-    text-decoration: none; /* Remove underline */
-}
-
-.profile-website a:hover {
-    text-decoration: underline; /* Underline on hover */
+.user-info button:hover {
+    background-color: #feb47b; /* Hover background color */
 }

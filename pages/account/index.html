@@ -52,13 +52,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/account/direct/">Notifications</a>
+                    <a class="nav-link" href="/pages/blog/">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/account/settings/">Settings</a>
+                    <a class="nav-link" href="/pages/support/">Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-primary btn-account" href="/pages/login/">Web App</a>
+                    <a class="btn btn-primary btn-account" href="https://app.swapix.fun">Web App</a>
                 </li>
             </ul>
         </div>
@@ -118,16 +118,34 @@
     </div>
     <div class="content" id="main-content">
         <div class="section profile" id="profile">
-            <div class="profile-header">
-                <div class="profile-picture">
-                    <img src="[User's Profile Picture URL]" alt="Profile Picture">
+            <div class="gradient-section">
+                <div class="greeting">
+                    <h1 id="account-greeting">Hey,</h1>
+                    <p>Here's your information:</p>
                 </div>
-                <div class="profile-info">
-                    <h2 id="profile-name">[User's Name]</h2>
-                    <p id="profile-email">[User's Email]</p>
-                    <p id="profile-location">Location: [User's Location]</p>
-                    <p id="profile-bio">Bio: [User's Bio]</p>
-                    <p id="profile-website">Website: <a href="[User's Website URL]">[User's Website]</a></p>
+                <div class="user-info">
+                    <table>
+                        <tr>
+                            <td>Email</td>
+                            <td id="account-table-email">[User's Email]</td>
+                            <td><button onclick="openDialog('email')">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td id="account-table-username">[User's Name]</td>
+                            <td><button onclick="openDialog('username')">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Civil name</td>
+                            <td id="account-table-civilname">[User's Name]</td>
+                            <td><button onclick="openDialog('civilname')">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Resident</td>
+                            <td id="account-table-resident">[User's Name]</td>
+                            <td><button onclick="openDialog('resident')">Edit</button></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
