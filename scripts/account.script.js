@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded',async function() {
             document.getElementById("account-picture").src = requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID");
         })
         .catch(error => {
+            showError(error);
             console.error(error);
         });
     
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded',async function() {
             if (response.ok) {
               return response.json();
             } else {
+              showError();
               throw new Error("Login failed: " + response.body);
             }
           })
@@ -85,6 +87,7 @@ document.addEventListener('DOMContentLoaded',async function() {
             document.getElementById("account-greeting").innerText = "Hey, " + data.firstName ; 
         })
         .catch(error => {
+            showError(error);
             console.error(error);
         }); 
         
@@ -107,6 +110,7 @@ document.addEventListener('DOMContentLoaded',async function() {
             document.getElementById("account-picture").src = requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID");
         })
         .catch(error => {
+            showError(error);
             console.error(error);
         });
     
@@ -143,4 +147,11 @@ function closeDialog() {
     var overlay = document.getElementById('modal-overlay');
     dialog.style.display = 'none';
     overlay.style.display = 'none';
+}
+
+function showError(ex) {
+    const errorContainer = document.getElementById("error-container");
+    errorContainer.style.display = "block";
+    const errorContainerex = document.getElementById("error-container-ex");
+    errorContainerex.innerText = ex.Message;
 }
