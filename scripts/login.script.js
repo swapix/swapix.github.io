@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(data);
             setCookie("swpKey",data.apiKey,)
             setCookie("profileID",data.userId,)
+            setCookie("swpDefault","1");
+            setCookie("__b__a_version","b")
             window.location.href = "/pages/account/"
           })
           .catch(error => {

@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="/styles/footer.style.css"> 
     <link rel="stylesheet" href="/styles/account/account-header.style.css"> 
     <link rel="stylesheet" href="/styles/animations.style.css"> 
+    <link rel="stylesheet" href="/styles/account/account-maincontent.style.css"> 
+    <link rel="stylesheet" href="/styles/account/pages/profile.style.css"> 
     <link rel="stylesheet" href="/styles/component_colors.css"> 
     <link rel="stylesheet" href="/styles/account/account-sidebar.style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
@@ -33,7 +35,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/scripts/navbar.script.js"></script>
     <script src="/scripts/cookies.script.js"></script>
+    <link rel="stylesheet" href="/styles/loader/spinner.style.css">
     <script src="/scripts/account.script.js"></script>
+    <script src="/scripts/account.maincontent.script.js"></script>
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body>
@@ -59,11 +63,18 @@
             </ul>
         </div>
     </nav>
-
+    
+    <div id="loader-overlay">
+        <div class="loader">
+            <div class="spinner"></div>
+        </div>
+        
+        <p class="loading-text">Something great is coming...</p>
+    </div>
+    
+    
     <div class="sidebar">
         <div class="sidebar-header">
-            <small id="account-phrase">Hey, </small>
-            <button class="logout-button">Log Out</button>
         </div>
         <div class="user-info">
             <div class="user-profile">
@@ -71,31 +82,30 @@
                 <div class="user-details">
                     <h5 id="account-name">User Name</h5>
                     <p id="account-email">Email Address</p>
-                    <p id="account-status">Status</p>
                 </div>
             </div>
         </div>
         <ul class="menu">
             <li>
-                <a href="#profile" class="menu-item">
+                <a class="menu-item" onclick="showSection('profile')">
                     <i class="far fa-user-circle"></i>
                     <span>Profile</span>
                 </a>
             </li>
             <li>
-                <a href="#settings" class="menu-item">
+                <a  class="menu-item" onclick="showSection('settings')">
                     <i class="fas fa-cogs"></i>
                     <span>Settings</span>
                 </a>
             </li>
             <li>
-                <a href="#notifications" class="menu-item">
+                <a class="menu-item" onclick="showSection('notifications')">
                     <i class="far fa-bell"></i>
                     <span>Notifications</span>
                 </a>
             </li>
             <li>
-                <a href="#activity-log" class="menu-item">
+                <a  class="menu-item" onclick="showSection('activity-log')"> 
                     <i class="fas fa-history"></i>
                     <span>Activity Log</span>
                 </a>
@@ -103,79 +113,39 @@
             <!-- Additional menu items can be added here -->
         </ul>
         <div class="logout">
-            <button class="logout-button">Log Out</button>
+            <button class="logout-button" onclick="logoutFromMain()">Log Out</button>
         </div>
     </div>
-
-
-    <!-- Main content area -->
-    <div class="main-content">
-        <!-- Existing navigation bar remains the same -->
-
-        <!-- Updated container to include modern account features -->
-        <div class="container mt-5">
-            <div class="row">
-                <!-- New section for profile information -->
-                <div class="col-md-4" id="profile">
-                    <!-- Profile card -->
-                    <div class="card">
-                        <div class="card-header">
-                            Profile Information
-                        </div>
-                        <div class="card-body">
-                            <!-- Add content for profile -->
-                            <button class="toggle-button" onclick="toggleContent('profile')">Toggle</button>
-                            <p class="content">Name: [User's Name]</p>
-                            <p class="content">Email: [User's Email]</p>
-                        </div>
-                    </div>
+    <div class="content" id="main-content">
+        <div class="section profile" id="profile">
+            <div class="profile-header">
+                <div class="profile-picture">
+                    <img src="[User's Profile Picture URL]" alt="Profile Picture">
                 </div>
-
-                <!-- New section for account settings -->
-                <div class="col-md-4" id="settings">
-                    <!-- Account settings card -->
-                    <div class="card">
-                        <div class="card-header">
-                            Account Settings
-                        </div>
-                        <div class="card-body">
-                            <!-- Add content for account settings -->
-                            <button class="toggle-button" onclick="toggleContent('settings')">Toggle</button>
-                            <p class="content">Settings content...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- New section for notifications -->
-                <div class="col-md-4" id="notifications">
-                    <!-- Notifications card -->
-                    <div class="card">
-                        <div class="card-header">
-                            Notifications
-                        </div>
-                        <div class="card-body">
-                            <!-- Add content for notifications -->
-                            <button class="toggle-button" onclick="toggleContent('notifications')">Toggle</button>
-                            <p class="content">Notifications content...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- New section for activity log -->
-                <div class="col-md-4" id="activity-log">
-                    <!-- Activity log card -->
-                    <div class="card">
-                        <div class="card-header">
-                            Activity Log
-                        </div>
-                        <div class="card-body">
-                            <!-- Add content for activity log -->
-                            <button class="toggle-button" onclick="toggleContent('activity-log')">Toggle</button>
-                            <p class="content">Activity log content...</p>
-                        </div>
-                    </div>
+                <div class="profile-info">
+                    <h2 id="profile-name">[User's Name]</h2>
+                    <p id="profile-email">[User's Email]</p>
+                    <p id="profile-location">Location: [User's Location]</p>
+                    <p id="profile-bio">Bio: [User's Bio]</p>
+                    <p id="profile-website">Website: <a href="[User's Website URL]">[User's Website]</a></p>
                 </div>
             </div>
+        </div>
+
+
+        <div class="section" id="settings">
+            <h2>Account Settings</h2>
+            <p>Settings content...</p>
+        </div>
+
+        <div class="section" id="notifications">
+            <h2>Notifications</h2>
+            <p>Notifications content...</p>
+        </div>
+
+        <div class="section" id="activity-log">
+            <h2>Activity Log</h2>
+            <p>Activity log content...</p>
         </div>
     </div>
 

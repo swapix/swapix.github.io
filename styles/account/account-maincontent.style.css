@@ -1,0 +1,19 @@
+.main-content {
+    margin-left: 250px; /* Adjust based on the width of the sidebar */
+    padding-top: 60px; /* Ensure content starts below the header navbar */
+}
+#main-content {
+    flex: 1;
+    padding-left: 250px; /* Adjust to match sidebar width */
+    transition: padding-left 0.3s ease; /* Main content animation */
+}
+
+.section {
+    display: none;
+    padding: 20px;
+}
+
+/* Show the section */
+.section.active {
+    display: block;
+}

@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.getElementById("account-name").innerText = "" + data.firstName;
             document.getElementById("account-email").innerText = "" + data.email;
-            document.getElementById("account-status").innerText = "" + data.bio;
         })
         .catch(error => {
             console.error(error);
@@ -50,9 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error(error);
         });
-});
+    
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+            setTimeout(() => {
+                document.body.classList.add('loaded-hidden');
+                showSection('profile');
+            }, 500);
+        }, 2000);
+    });
 
 function toggleContent(id) {
     var content = document.getElementById(id).getElementsByClassName('content')[0];
     content.classList.toggle('collapsed');
+}
+
+function logoutFromMain(){
+    deleteCookie("swpKey")
+    deleteCookie("profileID")
+    window.location.href = "/"
 }
