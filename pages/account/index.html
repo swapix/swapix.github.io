@@ -56,17 +56,32 @@
         </div>
     </div>
     <div id="modal-overlay" class="modal-overlay"></div>
-    <div id="profilePictureDialog" class="dialog">
+    <div class="overlay" id="overlay"></div>
+
+    <div id="profile-picture-overlay" class="overlay"></div>
+
+    <div id="profile-picture-dialog" class="dialog">
         <div class="dialog-content">
             <h2>Change Profile Picture</h2>
-            <input type="file" id="profilePictureInput" accept="image/*" onchange="previewProfilePicture(event)">
-            <div id="previewContainer" class="preview-container"></div>
+            <div id="profile-picture-drag-drop-container" class="drag-drop-container" 
+                ondragover="profilePictureDragDrop.dragOver(event)" 
+                ondragleave="profilePictureDragDrop.dragLeave(event)" 
+                ondrop="profilePictureDragDrop.drop(event)">
+                <input type="file" id="profile-picture-file-input" 
+                    onchange="profilePictureDragDrop.fileInputChanged()" />
+                <label for="profile-picture-file-input" class="file-input-label">
+                    Drag & Drop or Click to Upload
+                </label>
+            </div>
+            <img id="profile-picture-preview" class="preview-image" alt="Profile Picture Preview" />
             <div class="button-container">
-                <button onclick="cancelProfilePictureChange()">Cancel</button>
-                <button onclick="saveProfilePicture()">Save</button>
+                <button class="picture-dialog-button"onclick="profilePictureDialog.save()">Save</button>
+                <button class="picture-dialog-button"onclick="profilePictureDialog.cancel()">Cancel</button>
             </div>
         </div>
     </div>
+
+
 
 
     <nav class="navbar navbar-white navbar-expand-lg">
@@ -106,7 +121,7 @@
         <div class="sidebar-header">
         </div>
         <div class="user-info">
-            <div class="user-profile" onclick="openProfilePictureDialog()">
+            <div class="user-profile" onclick="profilePictureDialog.open()">
                 <img id="account-picture" alt="Profile Picture">
                 <div class="user-details">
                     <h5 id="account-name">User Name</h5>
