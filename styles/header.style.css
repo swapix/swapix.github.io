@@ -82,3 +82,8 @@
 .navbar-toggler:hover .svg-logo {
     transform: scale(1.2); /* Vergrößern des Logos beim Hover über den Toggle-Button */
 }
+
+.container-row{
+    display: flex;
+    flex-wrap: wrap;
+}

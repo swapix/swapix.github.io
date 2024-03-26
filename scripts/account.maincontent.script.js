@@ -25,4 +25,3 @@ function toggleSidebar() {
         mainContent.style.paddingLeft = "250px";
     }
 }
-
