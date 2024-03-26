@@ -4,7 +4,7 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwapiX - Login</title>
+    <title>SwapiX - Authentication</title>
     <meta name="description" content="SwapiX provides comprehensive Terms of Service to ensure transparency and legality in all transactions. Learn more about our terms and conditions.">
     <meta name="keywords" content="SwapiX, Terms of Service, legal documents, privacy policy, compliance">
     <link rel="canonical" href="https://core.swapix.fun/terms-of-service">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/account/account-header.style.css"> 
     <link rel="stylesheet" href="/styles/animations.style.css"> 
     <link rel="stylesheet" href="/styles/auth/authentication.styles.css"> 
+    <link rel="stylesheet" href="/styles/components/shimmer-button.style.css"> 
     <!-- Slick Carousel Stylesheets -->
     <link rel="stylesheet" href="/styles/typography.style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.3/paper-full.min.js'></script>
@@ -23,6 +24,7 @@
     <script src="/scripts/authentication/page.script.js"></script>
     <script src="/scripts/authentication/login.script.js"></script>
     <script src="/scripts/cookies.script.js"></script>
+    <script src="/scripts/shared/texthandling.script.js"></script>
     <!-- Favicon -->
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
@@ -95,7 +97,7 @@
                   <input id="email" type="email" name="email">
                 </div>
                 <div class="form-element form-stack">
-                  <label for="username-signup" class="form-label">Username</label>
+                  <label for="username-signup" class="form-label">Civilname</label>
                   <input id="username-signup" type="text" name="username">
                 </div>
                 <div class="form-element form-stack">
@@ -111,6 +113,7 @@
                   <button id="goLeft" class="signup off">Log In</button> 
                 </div>
               </form>
+              <div class="text-center mt-4 login-error-text" id="message-signup"></div>
             </div>
           </div>
           <div class="right">
@@ -126,11 +129,14 @@
                   <input id="password-login" type="password" name="password">
                 </div>
                 <div class="form-element form-submit">
+                    
                   <button id="logIn" class="login" type="submit" name="login">Log In</button>
                   <button id="goRight" class="login off" name="signup">Sign Up</button>
                 </div>
               </form>
               <div class="text-center mt-4 login-error-text" id="message"></div>
+              
+            
             </div>
           </div>
         </div>
