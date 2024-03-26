@@ -27,6 +27,36 @@
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body>
+    <div id="back">
+        <canvas id="canvas" class="canvas-back"></canvas>
+        <div class="backRight">    
+        </div>
+        <div class="backLeft">
+            <svg class="animate__animated animate__fadeInUp svg-rounded" width="171" height="172" viewBox="0 0 171 172" xmlns="http://www.w3.org/2000/svg" class="svg-animation">
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#030321" />
+                                        <stop offset="100%" style="stop-color:#1d2d52" />
+                                      </linearGradient>
+                </defs>
+                <rect y="0.622681" width="170.66" height="170.66" rx="42.6651" fill="url(#gradient)" />
+      
+                <path d="M42.665 102.841 L97.2657 48.2404" stroke="white" stroke-width="5.67005" stroke-linecap="round" class="animated-path" stroke-dasharray="120 50">
+                  <animate attributeName="stroke-dashoffset" from="0" to="170" dur="3s" repeatCount="indefinite" />
+                </path>
+      
+                <path d="M128.217 69.2868L73.6161 123.887" stroke="white" stroke-width="5.67005" stroke-linecap="round" class="animated-path2" stroke-dasharray="120 50">
+                  <animate attributeName="stroke-dashoffset" from="170" to="0" dur="3s" repeatCount="indefinite" />
+                </path>
+      
+                <path d="M97.5525 47.9542H100.388V45.1192H97.5525V47.9542ZM65.0977 50.7892H97.5525V45.1192H65.0977V50.7892ZM94.7175 47.9542V80.4091H100.388V47.9542H94.7175Z" fill="white"/>
+              
+
+                <path d="M73.3293 124.174H70.4943V127.009H73.3293V124.174ZM105.784 121.339H73.3293V127.009H105.784V121.339ZM76.1644 124.174V91.7187H70.4943V124.174H76.1644Z" fill="white"/>
+                </svg>
+        </div>
+      </div>
+      
     <nav class="navbar navbar-expand-lg navbar-white">
         <div class="container">
             <a class="navbar-brand" href="/">
@@ -41,31 +71,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/pages/features/">Features</a>
+                        <a class="nav-link" href="/pages/blog/">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/JW-Limited">About</a>
+                        <a class="nav-link" href="/pages/support/">Support</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="/pages/login/">Start Now!</a>
+                        <a class="btn btn-primary" href="/">Go back</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="back">
-        <canvas id="canvas" class="canvas-back"></canvas>
-        <div class="backRight">    
-        </div>
-        <div class="backLeft">
-        </div>
-      </div>
-      
+    
       <div id="slideBox">
         <div class="topLayer">
           <div class="left">
             <div class="content">
-              <h2>Sign Up</h2>
+              <h1>Sign Up</h1>
               <form id="form-signup" method="post" onsubmit="return false;">
                 <div class="form-element form-stack">
                   <label for="email" class="form-label">Email</label>
@@ -81,7 +104,7 @@
                 </div>
                 <div class="form-element form-checkbox">
                   <input id="confirm-terms" type="checkbox" name="confirm" value="yes" class="checkbox">
-                  <label for="confirm-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                  <label for="confirm-terms">I agree to the <a href="/pages/terms-of-service/">Terms of Service</a> and <a href="/pages/privacy-policy/">Privacy Policy</a></label>
                 </div>
                 <div class="form-element form-submit">
                   <button id="signUp" class="signup" type="submit" name="signup">Sign up</button>
