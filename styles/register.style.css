@@ -1,6 +1,5 @@
 .login-container{
     background: linear-gradient(195deg, #030321, #1d2d52); 
-    height: 95vh;    
 }
 .card {
     border: none;
@@ -49,9 +48,4 @@
     width: 100px;
     height: auto;
     margin-bottom: 20px;
-}
-
-.login-error-text{
-    margin-bottom:  10px;
-    padding-bottom: 10px;
 }

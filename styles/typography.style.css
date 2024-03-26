@@ -1,0 +1,24 @@
+h1 {
+  font: 700 48px/1.2 "Poppins", sans-serif;
+}
+
+h2 {
+  font: 700 32px/1.2 "Poppins", sans-serif;
+}
+
+h3 {
+  font: 700 24px/1.2 "Poppins", sans-serif;
+}
+
+h4 {
+  font: 700 20px/1.2 "Poppins", sans-serif;
+}
+
+h5 {
+  font: 500 18px/1.2 "Poppins", sans-serif;
+}
+
+h6 {
+  font: 500 16px/1.2 "Poppins", sans-serif;
+  text-transform: uppercase;
+}
