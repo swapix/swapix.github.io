@@ -3,8 +3,16 @@ document.addEventListener('DOMContentLoaded', async function() {
     if(getCookie("swpKey") != null && getCookie("profileID") != null){
         window.location.href = "/pages/account/"
     }
+    else{
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+        setTimeout(() => {
+            document.body.classList.add('loaded-hidden');
+        }, 500);
+    }, 1000);
+    }
 
-    document.getElementById("form-login").addEventListener("submit", async function(event) {
+    document.getElementById("logIn").addEventListener("click", async function(event) {
         event.preventDefault();
         
         var username = document.getElementById("username-login").value;
@@ -46,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             setCookie("profileID",data.userId,)
             setCookie("swpDefault","1");
             setCookie("__b__a_version","b")
-            window.location.href = "/pages/account/"
+            window.location.href = "/pages/account/" + new QueryManager().getQueryString();
           })
           .catch(error => {
             showError("login",error);
@@ -165,7 +173,7 @@ async function login(username, password)
             setCookie("profileID",data.userId,)
             setCookie("swpDefault","1");
             setCookie("__b__a_version","b")
-            window.location.href = "/pages/account/"
+            window.location.href = "/pages/account/" + new QueryManager().getQueryString();
           })
           .catch(error => {
             showError("login",error);

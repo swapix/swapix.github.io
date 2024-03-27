@@ -16,7 +16,6 @@
     <meta property ="og:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1711235160/qlisyhr0blxwb2k9xr5v.png" />
     <title>SwapiX - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="/styles/index.style.css"> 
@@ -29,7 +28,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/styles/side_button.style.css">
     <link rel="stylesheet" href="/styles/loader/spinner.style.css">
-    <link rel="stylesheet" href="/styles/components/subscription-v2.style.css"> 
+    <link rel="stylesheet" href="/styles/caroussel_sub.style.css"> 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -37,9 +36,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/scripts/index.script.js"></script>
-    <script src="/scripts/navbar.script.js"></script>
-    <script src="/scripts/cookies.script.js"></script>
+    <script src="scripts/index.script.js"></script>
+    <script src="scripts/navbar.script.js"></script>
+    <script src="scripts/cookies.script.js"></script>
     <link rel="icon" href="/media/icons/logo.png" sizes="32x32">
 </head>
 <body class="loaded loaded-hidden">
@@ -166,7 +165,6 @@
                     <button id="viewMoreBtn" type="button" class="btn btn-features" >View More <i class="fas fa-arrow-right ml-2"></i></button>
                 </div>
             </div>
-            <div class="spacer-50"></div><!-- ./ spacer -->
             <div class="row">
                 <div class="col-md-4" >
                     <div class="feature-box text-center p-4 mb-4" href="/pages/features/">
@@ -194,90 +192,75 @@
     </section>
     <section class="subscription">
         <div class="container">
-            
-            <div class="spacer-80"></div><!-- ./ spacer -->
             <div class="row">
-                
                 <div class="col-md-12 mb-4 fadeInUpstatic">
                     <h2>Subscription</h2>
                     <p class="lead">Choose the plan that fits your needs</p>
                 </div>
             </div> 
-            <div class="spacer-50"></div><!-- ./ spacer -->
-        <div class="row">
-            <div class="col-lg-4 mx-auto text-center col-md-6">
-                <div class="single-price-table">
-                    <div class="price-design-elemnts one"></div><!-- ./elemnts one -->
-                    <div class="price-design-elemnts two"></div><!-- ./elemnts two -->
-                    <div class="price-design-elemnts three"></div><!-- ./elemnts three -->
-                    <div class="price-design-elemnts four"></div><!-- ./elemnts four -->
-                    <div class="price-header">
-                        <span class="package-title">Lite</span>
-                        <span class="lite-amount">$0<span>/</span><span>mo</span></span>
-                    </div><!-- ./ price header -->
-                    <div class="price-body subscription-checks-lite">
-                        <ul>
-                            <li><i class="fas fa-check"></i>  Integration with third-party apps</li>
-                            <li><i class="fas fa-check"></i>  Access to basic analytics</li>
-                            <li><i class="fas fa-check"></i>  Basic customer support</li>
-                            <li><i class="fas fa-check"></i>  Mobile/Desktop/Web Application</li>
-                        </ul>
-                    </div><!-- ./ price body -->
-                    <div class="price-footer">
-                        <button type="button" id="lite-sub-button" class="btn btn-lg btn-block btn-outline-primary mt-auto btn" id="subscription-button-basic">Get Started</button>
-                    </div><!-- ./price footer -->
-                </div><!-- ./ prioce table -->
-            </div><!-- ./ column -->
-            <div class="col-lg-4 mx-auto text-center col-md-6">
-                <div class="single-price-table little-backdrop">
-                    <div class="price-design-elemnts one"></div><!-- ./elemnts one -->
-                    <div class="price-design-elemnts two"></div><!-- ./elemnts two -->
-                    <div class="price-design-elemnts three"></div><!-- ./elemnts three -->
-                    <div class="price-design-elemnts four"></div><!-- ./elemnts four -->
-                    <div class="price-header">
-                        <span class="package-title">Essential</span>
-                        <span class="package-amount">$9.99<span>/</span><span>mo</span></span>
-                    </div><!-- ./ price header -->
-                    <div class="price-body subscription-checks">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Everything from Lite</li>
-                            <li><i class="fas fa-check"></i> Advanced analytics</li>
-                            <li><i class="fas fa-check"></i> Priority customer support</li>
-                            <li><i class="fas fa-check"></i> Include Swapi Buddy (Lite)</li>
-                        </ul>
-                    </div><!-- ./ price body -->
-                    <div class="price-footer">
-                        <button type="button" id="basic-sub-button" class="btn btn-lg btn-block btn-outline-primary mt-auto btn" id="subscription-button-basic">Get Started</button>
-                    </div><!-- ./price footer -->
-                </div><!-- ./ prioce table -->
-            </div><!-- ./ column -->
-            <div class="col-lg-4 mx-auto text-center col-md-6">
-                <div class="single-price-table">
-                    <div class="price-design-elemnts one"></div><!-- ./elemnts one -->
-                    <div class="price-design-elemnts two"></div><!-- ./elemnts two -->
-                    <div class="price-design-elemnts three"></div><!-- ./elemnts three -->
-                    <div class="price-design-elemnts four"></div><!-- ./elemnts four -->
-                    <div class="price-header">
-                        <span class="package-title">Premium</span>
-                        <span class="premium-amount">$19.9<span>/</span><span>mo</span></span>
-                    </div><!-- ./ price header -->
-                    <div class="price-body subscription-checks">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Everything from Basic</li>
-                            <li><i class="fas fa-check"></i> Advanced analytics by HKCM</li>
-                            <li><i class="fas fa-check"></i> 24/7 priority customer support</li>
-                            <li><i class="fas fa-check"></i> Access to premium templates</li>
-                        </ul>
-                    </div><!-- ./ price body -->
-                    <div class="price-footer">
-                        <button type="button" id="premium-sub-button" class="btn btn-lg btn-block btn-outline-primary mt-auto btn" id="subscription-button-basic">Get Started</button>
-                    </div><!-- ./price footer -->
-                </div><!-- ./ prioce table -->
-            </div><!-- ./ column -->
-        </div><!-- ./ row -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Lite</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ month</small></h1>
+                            <div class="subscription-checks-lite">
+                                <ul>
+                                <li><i class="fas fa-check"></i>  Integration with third-party apps</li>
+                                <li><i class="fas fa-check"></i>  Access to basic analytics</li>
+                                <li><i class="fas fa-check"></i>  Basic customer support</li>
+                                <li><i class="fas fa-check"></i>  Mobile/Desktop/Web Application</li>
+                            </ul>
+                        </div>
+                            <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-auto btn-sec" id="subscription-button-free">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 basic-card">
+                        
+                        <div class="badge">Best Choice!</div>
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Basic</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$9.99 <small class="text-muted">/ month</small></h1>
+                            <div class="subscription-checks">
+                                <ul>
+                                <li><i class="fas fa-check"></i> Everything from Lite</li>
+                                <li><i class="fas fa-check"></i> Advanced analytics</li>
+                                <li><i class="fas fa-check"></i> Priority customer support</li>
+                                <li><i class="fas fa-check"></i> Include Swapi Buddy (Lite)</li>
+                            </ul>
+                            </div>
+                            <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-auto btn" id="subscription-button-basic">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        
+                        <div class="card-header">
+                            <div class="badge-premium">Professional</div> 
+                            <h4 class="my-0 font-weight-normal">Premium</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$19.99 <small class="text-muted">/ month</small></h1>
+                            <div class="subscription-checks">
+                                <ul>
+                                <li><i class="fas fa-check"></i> Everything from Basic</li>
+                                <li><i class="fas fa-check"></i> Advanced analytics by HKCM</li>
+                                <li><i class="fas fa-check"></i> 24/7 priority customer support</li>
+                                <li><i class="fas fa-check"></i> Access to premium templates</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-auto btn-sec" id="subscription-button-premium">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="spacer-50"></div><!-- ./ spacer -->
     </section>
     
     

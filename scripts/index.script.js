@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         }, 1000);
     }
 
-    document.getElementById("subscription-button-free").addEventListener('click',function(){
-        window.location.href = '/pages/login/';
+    document.getElementById("lite-sub-button").addEventListener('click',function(){
+        window.location.href = '/pages/v2/auth/';
     });
-    document.getElementById("subscription-button-basic").addEventListener('click',function(){
-        window.location.href = '/pages/login/?=basic';
+    document.getElementById("basic-sub-button").addEventListener('click',function(){
+        window.location.href = '/pages/v2/auth/?referal=subscriptions-home&action=sub&key=basic';
     });
-    document.getElementById("subscription-button-premium").addEventListener('click',function(){
-        window.location.href = '/pages/login/?=premium';
+    document.getElementById("premium-sub-button").addEventListener('click',function(){
+        window.location.href = '/pages/v2/auth/?referal=subscriptions-home&action=sub&key=premium';
     });
     document.getElementById('viewMoreBtn').addEventListener('click', function() {
         window.location.href = '/pages/features/';

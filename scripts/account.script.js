@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded',async function() {
             showError(error);
             console.error(error);
         });
-    
+        await generateNotificationRows(notificationData);
+
         setTimeout(() => {
             document.body.classList.add('loaded');
             setTimeout(() => {
                 document.body.classList.add('loaded-hidden');
-                showSection('profile');
-                generateNotificationRows(notificationData);
+                showRelevantPage();
             }, 500);
         }, 1000);
     }
@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded',async function() {
             showError(error);
             console.error(error);
         });
-    
+        generateNotificationRows(notificationData);
+
         setTimeout(() => {
             document.body.classList.add('loaded');
             setTimeout(() => {
                 document.body.classList.add('loaded-hidden');
-                showSection('profile');
-                generateNotificationRows(notificationData);
+                showRelevantPage();
             }, 500);
         }, 2000);
     }
@@ -154,4 +154,24 @@ function showError(ex) {
     errorContainer.style.display = "block";
     const errorContainerex = document.getElementById("error-container-ex");
     errorContainerex.innerText = ex.Message;
+}
+
+function showRelevantPage(){
+    const qm = new QueryManager();
+    switch(qm.getParam("action")){
+        case "sub":
+            showSection('subscriptions');
+            break;
+        case "direct":
+            showSection('notifications');
+            break;
+        case "broker":
+            showSection('integrations');
+            break;
+        case "settings":
+            showSection('settings');
+            break;
+        default:
+            showSection('profile');
+    }
 }
