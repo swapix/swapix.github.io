@@ -3,11 +3,11 @@ const recentUserName = "";
 
 
 document.addEventListener('DOMContentLoaded', async function() {
-  const qm = new QueryManager();
-    if(getCookie("swpKey") != null && getCookie("profileID") != null){
-      if(qm.getParam("action") == "login")
+    if(getCookie("swpKey") != null && getCookie("profileID") != null)
+    {
+      if(new QueryManager().getParam("action") == "login")
       {
-        if(qm.getParam("key") == "webApp"){
+        if(new QueryManager().getParam("key") == "webApp"){
           window.location.href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
         }
       }

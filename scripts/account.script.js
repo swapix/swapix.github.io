@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded',async function() {
     }
 
     if(getCookie("swpCacherSpeedEnhancer") == "true"){
+        document.getElementById("header-webapp-button").href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
+
         document.getElementById("account-name").innerText = getCookie("__swp_cgb_account-name");
         document.getElementById("account-email").innerText = getCookie("__swp_cgb_account-email");
         document.getElementById("account-table-email").innerText = getCookie("__swp_cgb_account-email")
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded',async function() {
             }
           })
         .then(data => {
-
+            document.getElementById("header-webapp-button").href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
             setCookie("__swp_cgb_account-name", data.firstName);
             setCookie("__swp_cgb_account-email", data.email);
             setCookie("__swp_cgb_account-username", data.userName);
