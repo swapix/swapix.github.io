@@ -1,10 +1,19 @@
 const usingRecentUser = false;
 const recentUserName = "";
+const qm = new QueryManager();
 
 document.addEventListener('DOMContentLoaded', async function() {
 
     if(getCookie("swpKey") != null && getCookie("profileID") != null){
+      if(qm.getParam("action") == "login")
+      {
+        if(qm.getParam("key") == "webApp"){
+          window.location.href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
+        }
+      }
+      else{
         window.location.href = "/pages/account/" + new QueryManager().getQueryString();
+      }
     }
     else{
       if(getCookie("__swp_cgb_account-username") !== null){
@@ -67,7 +76,16 @@ document.addEventListener('DOMContentLoaded', async function() {
             setCookie("profileID",data.userId,)
             setCookie("swpDefault","1");
             setCookie("__b__a_version","b")
-            window.location.href = "/pages/account/" + new QueryManager().getQueryString();
+
+            if(qm.getParam("action") == "login")
+            {
+              if(qm.getParam("key") == "webApp"){
+                window.location.href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
+              }
+            }else{
+              window.location.href = "/pages/account/" + new QueryManager().getQueryString();
+            }
+            
           })
           .catch(error => {
             showError("login",error);
