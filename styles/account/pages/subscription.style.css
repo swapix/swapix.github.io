@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-blue-900: #081030;
+  --c-blue-800: #111b40;
+  --c-blue-700: #152148;
+  --c-blue-500: #1d7bdb;
+  --c-blue-300: #293359;
+  --c-blue-200: #4e5985;
+  --c-blue-100: #dfe8ff;
+  --c-green-400: #4ade80;
+}
+
+/* Subscription Container */
+.subscription-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Active Subscription */
+.active-subscription {
+    width: 70%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.active-subscription .subscription-details {
+    display: flex;
+    align-items: center;
+}
+
+.active-subscription .subscription-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.active-subscription .subscription-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.active-subscription .subscription-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.active-subscription .subscription-features {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.active-subscription .upgrade-button {
+    background-color: #6c63ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.active-subscription .subscription-price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a2a2a;
+    font-family: "Manrope";
+}
+.active-subscription .upgrade-button:hover {
+    background-color: #5247d7;
+}
+
+.subscription-options {
+    width: 30%;
+}
+
+.subscription-options h3{
+    margin-bottom: 16px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.subscription-options h4{
+    color:#111b40;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.subscription-option {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px dotted #eee;
+    margin-bottom: 15px;
+}
+
+.subscription-option:hover{
+    background-color: var(--c-blue-100);
+    box-shadow: 0 14px 28px rgba(145, 145, 145, 0.25), 0 10px 10px rgba(145, 145, 145, 0.22);
+}
+
+.subscription-option:hover h4{
+    color: #2c2c2c;
+}
+
+.subscription-option .subscription-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.subscription-option .subscription-info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.subscription-option .subscription-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.subscription-option .subscription-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a2a2a;
+    font-family: "Manrope";
+    margin-left: auto;
+}
+
+.subscription-option .subscribe-button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-option .subscribe-button:hover {
+    background-color: #5247d7;
+}
+
+.invoice-container {
+    
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.invoice-container .h2{
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.invoice-text{
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.invoice-table {
+    border-radius: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.invoice-table th, .invoice-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.invoice-table th {
+    
+    background-color: #f0f0f0;
+}
+
+.invoice-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+.price-table.active {
+    background-image: linear-gradient(135deg, rgba(74, 222, 128, 0.25), rgba(29, 123, 219, 0.2) 20%, var(--c-blue-700) 40%, var(--c-blue-700) 100%);
+  }
+  
+  .price-table.active:after {
+    background-image: linear-gradient(135deg, var(--c-green-400), var(--c-blue-500) 40%, var(--c-blue-300) 60%, var(--c-blue-700) 100%);
+  }
+  
+  .active-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 24px;
+    color: var(--c-green-400);
+  }
+  
+  .subscribe-btn {
+    background-color: var(--c-blue-500);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: var(--c-blue-300);
+  }
+
+  .subscription-container {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .active-subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align items evenly along the vertical axis */
+    
+}
+
+.subscription-details {
+    margin-bottom: 20px; /* Add some space between details and footer */
+}
+
+.subscription-footer {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px dotted #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscription-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.upgrade-button {
+    background: linear-gradient(95deg, #ebebee, #f4f7fc);
+    color: #2a2a2a;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upgrade-button:hover {
+    background-color: #5247d7;
+}
+  .other-subscription {
+    background-color: var(--c-blue-800);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 400px;
+  }
+  
+  .other-subscription h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  .other-subscription table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+  
+  .other-subscription th,
+  .other-subscription td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .other-subscription th {
+    background-color: var(--c-blue-700);
+    color: #fff;
+  }
+  
+  .other-subscription tr:nth-child(even) {
+    background-color: var(--c-blue-900);
+  }
+  
+  .other-subscription tr:nth-child(odd) {
+    background-color: var(--c-blue-800);
+  }
+
+@-webkit-keyframes scale {
+  0% {
+    transform: translatey(-100%) translatex(-50%) scale(0);
+  }
+  100% {
+    transform: translatey(-100%) translatex(-50%) scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: translatey(-100%) translatex(-50%) scale(0);
+  }
+  100% {
+    transform: translatey(-100%) translatex(-50%) scale(1);
+  }
+}
+
+.subscribtion-text{
+    font-weight: normal;
+    color: #2a2a2a;
+}
+
+.swapix-text {
+    font-weight: bold;
+    color: #ffffff; /* Pink color for SwapiX text */
+    animation: swapColor 5s ease-in-out infinite alternate; /* Animate color change */
+  }
+  @keyframes swapColor {
+    0% {
+      color: #00C8FF; /* Blue to pink */
+    }
+    50% {
+      color: #2d42ad; /* Pink */
+    }
+    100% {
+      color: #4b5be7; /* Pink to blue */
+    }
+  }
+  

@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="/styles/loader/spinner.style.css"> 
+    <link rel="stylesheet" href="/styles/component_colors.css"> 
     <link rel="stylesheet" href="/styles/account/account-header.style.css"> 
     <link rel="stylesheet" href="/styles/animations.style.css"> 
     <link rel="stylesheet" href="/styles/auth/authentication.styles.css"> 
     <link rel="stylesheet" href="/styles/components/shimmer-button.style.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Slick Carousel Stylesheets -->
     <link rel="stylesheet" href="/styles/typography.style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.3/paper-full.min.js'></script>
@@ -129,8 +131,20 @@
             <div class="content animate__animated animate__zoomIn ">
                 
               <h1>Login</h1>
+              <div>
+                <div class="previously-used-account hkcm_bg" id="previously-used-account" onclick="SetUserName();">
+                  <button class="close-button" id="delete-pre-used-account" onclick=deletePreUsedAccount();>
+                    <i class="material-icons">close</i> 
+                  </button>
+                  <div class="account-details">
+                      <p id="recent-username"><strong>Username:</strong> user123</p>
+                      <p id="recent-email"><strong>Email:</strong> user123@example.com</p>
+                  </div>
+                  <div class="recent-label">Recent Used</div>
+                </div>
+              </div>
               <form id="form-login" method="post" onsubmit="return false;">
-                <div class="form-element form-stack">
+                <div class="form-element form-stack" id="login-username-section">
                   <label for="username-login" class="form-label">Username</label>
                   <input id="username-login" type="text" name="username">
                 </div>
@@ -144,7 +158,7 @@
                   <button id="goRight" class="login off" name="signup">Sign Up</button>
                 </div>
               </form>
-              <div class="text-center mt-4 login-error-text" id="message"></div>
+              <div class="login-error-text" id="message"></div>
               
             
             </div>

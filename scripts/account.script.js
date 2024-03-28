@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',async function() {
     closeDialog()
 
     if(getCookie("swpKey") == null || getCookie("profileID") == null){
-        window.location.href = "/pages/login/"
+        window.location.href = "/pages/v2/auth/?referal=account-logged-out&action=login&key=null"; 
     }
 
     if(getCookie("swpCacherSpeedEnhancer") == "true"){
@@ -157,6 +157,8 @@ function showError(ex) {
 }
 
 function showRelevantPage(){
+    SetSubscriptionState();
+
     const qm = new QueryManager();
     switch(qm.getParam("action")){
         case "sub":

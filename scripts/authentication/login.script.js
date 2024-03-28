@@ -1,9 +1,18 @@
+const usingRecentUser = false;
+const recentUserName = "";
+
 document.addEventListener('DOMContentLoaded', async function() {
 
     if(getCookie("swpKey") != null && getCookie("profileID") != null){
-        window.location.href = "/pages/account/"
+        window.location.href = "/pages/account/" + new QueryManager().getQueryString();
     }
     else{
+      if(getCookie("__swp_cgb_account-username") !== null){
+        document.getElementById("previously-used-account").style.display = "block";
+        document.getElementById("recent-username").innerHTML = "<strong>Username:</strong> " + getCookie("__swp_cgb_account-username");
+        document.getElementById("recent-email").innerHTML = "<strong>Email:</strong> " + getCookie("__swp_cgb_account-email");
+      }
+      
       setTimeout(() => {
         document.body.classList.add('loaded');
         setTimeout(() => {
@@ -22,6 +31,10 @@ document.addEventListener('DOMContentLoaded', async function() {
             userName: username,
             password: password
         };
+
+        if(usingRecentUser){
+          raw.userName = getCookie("__swp_cgb_account-username");
+        }
 
         const dataBlob = new Blob([JSON.stringify(raw)], {
             type: "application/json"
@@ -209,4 +222,17 @@ function getUsernameAsString() {
       console.error('Input element or value not found');
       return '';
   }
+}
+
+function deletePreUsedAccount(){
+  document.getElementById("previously-used-account").style.display = "none";
+  deleteCookie("__swp_cgb_account-username");
+}
+
+function SetUserName(){
+  document.getElementById("login-username-section").style.display = "none";
+  document.getElementById("delete-pre-used-account").style.display = "none";
+  document.getElementById("previously-used-account").style.background = "#dfe8ff";
+  document.getElementById("username-login").value = getCookie("__swp_cgb_account-username")
+  usingRecentUser  = true;
 }

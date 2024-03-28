@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/styles/account/account-sidebar.style.css">
     <link rel="stylesheet" href="/styles/account/pages/settings.styles.css">
     <link rel="stylesheet" href="/styles/dialogs/accunt-picture.style.css">
+    <link rel="stylesheet" href="/styles/account/pages/subscription.style.css">
     <link rel="stylesheet" href="/styles/dialogs/edit.style.css">
     <link rel="stylesheet" href="/styles/account/pages/notifications.style.css">
     <link rel="stylesheet" href="/styles/components/error-container.style.css">
@@ -43,6 +44,7 @@
     <script src="/scripts/account-picture.dialog.script.js"></script>
     <script src="/scripts/account/notification.fetch.script.js"></script>
     <script src="/scripts/cookies.script.js"></script>
+    <script src="/scripts/account/subscription-service.script.js"></script>
     <script src="/scripts/manager/imagemanager.script.js"></script>
     <link rel="stylesheet" href="/styles/loader/spinner.style.css">
     <script src="/scripts/account.script.js"></script>
@@ -304,13 +306,95 @@
             <h2>Broker</h2>
             <p>Activity log content...</p>
         </div>
+
         <div class="section" id="subscriptions">
-            <h2>Your Suzbscriptions</h2>
-            <p>Activity log content...</p>
+            <div class="section-header">
+                <h2>Youre Subscription</h2>
+                <p>Maximize your experience!</p>
+            </div>
+            
+            <div class="subscription-container">
+                 <!-- Active Subscription -->
+                <div class="active-subscription">
+                    <div class="subscription-details">
+                        <div class="subscription-info">
+                            <h3 class="swapix-text">SwapiX  <span class="subscribtion-text" id="subcon-subscirption-name">Your Current Subscription</span>
+                            </h3>
+                            <p id="subcon-subscirption-description">Get access to exclusive features!</p>
+                            <ul class="subscription-features">
+                                <li>
+                                    <i aria-hidden="true" class="checkmark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" />
+                                    </svg>
+                                    </i>
+                                    <span class="name">Premium Support</span>
+                                </li>
+                                <li>Feature 2</li>
+                                <li>Feature 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subscription-footer">
+                        <div class="subscription-price">$19.99/month</div>
+                        <button class="upgrade-button">Cancel</button>
+                    </div>
+                </div>
+                <!-- Subscription Options -->
+                <div class="subscription-options">
+                    <h3 class="other-subs-text">Availabel Subscriptions:</h3>
+                    <div class="subscription-option">
+                        <img src="https://img.icons8.com/?size=160&id=PX5w8T2tKuJj&format=png" alt="Subscription 1" class="subscription-img">
+                        <div class="subscription-info">
+                            <h4>BasiX</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            
+                        <div class="subscription-price">$9.99/month</div>
+                        </div>
+                    </div>
+                    <div class="subscription-option">
+                        <img src="https://img.icons8.com/?size=512&id=nfBuOILFwpdb&format=png" alt="Subscription 2" class="subscription-img">
+                        <div class="subscription-info">
+                            <h4>Pro</h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            
+                        <div class="subscription-price">$14.99/month</div>
+                        </div>
+                    </div>
+                    <!-- Add more subscription options here -->
+                </div>
+            </div>
+            <!-- Invoices Table -->
+            <div class="invoice-container">
+                <h2 class="invoice-text">Invoices:</h2>
+                <table class="invoice-table">
+                    <thead>
+                        <tr>
+                            <th>Invoice ID</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INV-002</td>
+                            <td>2024-03-25</td>
+                            <td>$19.99</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <td>INV-001</td>
+                            <td>2024-02-25</td>
+                            <td>$29.99</td>
+                            <td>Paid</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    <div class="side-panel" id="message-side-panel">
-        <!-- Content of the side panel goes here -->
+        <div class="side-panel" id="message-side-panel">
     </div>
 
 </body>
