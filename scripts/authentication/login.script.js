@@ -1,9 +1,9 @@
 const usingRecentUser = false;
 const recentUserName = "";
-const qm = new QueryManager();
+
 
 document.addEventListener('DOMContentLoaded', async function() {
-
+  const qm = new QueryManager();
     if(getCookie("swpKey") != null && getCookie("profileID") != null){
       if(qm.getParam("action") == "login")
       {
