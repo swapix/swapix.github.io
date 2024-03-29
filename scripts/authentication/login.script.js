@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', async function() {
             body: JSON.stringify(raw),
             redirect: "follow"
           };
-
+          
+          const qm = new QueryManager();
+          
           await fetch("https://mutual-loved-filly.ngrok-free.app/api/v1/auth/login", requestOptions)
           .then(response => {
             if (response.ok) {
@@ -76,7 +78,6 @@ document.addEventListener('DOMContentLoaded', async function() {
             setCookie("profileID",data.userId,)
             setCookie("swpDefault","1");
             setCookie("__b__a_version","b")
-
             if(qm.getParam("action") == "login")
             {
               if(qm.getParam("key") == "webApp"){
