@@ -1,6 +1,6 @@
 const requestURL = "https://mutual-loved-filly.ngrok-free.app/api/v1/";
 document.addEventListener('DOMContentLoaded', async function() {
-
+    allConsentGranted();
     if(getCookie("swpKey") != null && getCookie("profileID") != null){
         document.body.classList.remove('loaded-hidden');
         document.body.classList.remove('loaded');
@@ -75,3 +75,12 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
 });
 
+
+function allConsentGranted() {
+    gtag('consent', 'update', {
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted'
+    });
+    }
