@@ -175,6 +175,9 @@ function showRelevantPage(){
         case "settings":
             showSection('settings');
             break;
+        case "logout":
+            logoutFromMain();
+            break;
         default:
             showSection('profile');
     }
