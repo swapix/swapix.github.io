@@ -61,15 +61,4 @@ class QueryManager {
     }
   }
   
-  // Example usage:
-  const queryManager = new QueryManager();
   
-  // Get the value of the 'authKey' parameter
-  const authKey = queryManager.getParam('authKey');
-  console.log('Auth Key:', authKey);
-  
-  // Set a new value for the 'authKey' parameter
-  queryManager.setParam('authKey', 'newAuthKey');
-  
-  // Delete the 'authKey' parameter
-  queryManager.deleteParam('authKey');
