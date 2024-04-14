@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             loginButton.innerText = "My Account"
 
             const actionButtonJoin = document.getElementById("hero-actionbutton-join");
-            actionButtonJoin.href = "https://play.google.com/store/apps/details?id=com.jwlimited.swapix&hl=de&gl=US";
+            actionButtonJoin.innerText = "Be your Best!"
+            actionButtonJoin.href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
             
             document.getElementById("hero-big-description").innerText = "You are a part of something big lets build something great together."
 

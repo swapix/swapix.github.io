@@ -13,10 +13,11 @@ document.addEventListener('DOMContentLoaded',async function() {
     closeDialog()
 
     if(getCookie("swpKey") == null || getCookie("profileID") == null){
-        window.location.href = "/pages/v2/auth/?referal=account-logged-out&action=login&key=null"; 
+        window.location.href = "/pages/v2/auth/"; 
     }
 
-    if(getCookie("swpCacherSpeedEnhancer") == "true"){
+    if(getCookie("swpCacherSpeedEnhancer") == "true")
+        {
         document.getElementById("header-webapp-button").href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
 
         document.getElementById("account-name").innerText = getCookie("__swp_cgb_account-name");
