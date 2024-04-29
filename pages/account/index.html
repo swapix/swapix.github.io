@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="SwapiX - Where Traders meet!" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="The only social media plattform on the market from traders for traders and all that want to start!">
+    <meta property="og:description" content="The only social media plattform on the market to start youre hustle!">
     <meta property="og:url" content="https://core.swapix.fun/" />
     <meta property="og:image" content="https://core.swapix.fun/media/icons/logo.png" />
     <meta property="og:site_name" content="SwapiX" />
     <meta property ="twitter:card" content ="summary_large_image"/>
     <meta property ="twitter:url" content ="https://core.swapix.fun"/>
     <meta property ="twitter:title" content ="SwapiX - Where Traders meet!"/>
-    <meta property ="twitter:description" content ="The only social media plattform on the market from traders for traders and all that want to start!"/>
+    <meta property ="twitter:description" content ="The only social media plattform on the market to start youre hustle!"/>
     <meta property ="twitter:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1711235160/qlisyhr0blxwb2k9xr5v.png"/>
     <meta property ="og:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1711235160/qlisyhr0blxwb2k9xr5v.png" />
     <title>SwapiX - Account</title>
@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="/styles/dialogs/accunt-picture.style.css">
     <link rel="stylesheet" href="/styles/account/pages/subscription.style.css">
     <link rel="stylesheet" href="/styles/dialogs/edit.style.css">
+    
+    <link rel="stylesheet" href="/styles/account/pages/integrations.style.css">
     <link rel="stylesheet" href="/styles/account/pages/notifications.style.css">
     <link rel="stylesheet" href="/styles/components/error-container.style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
@@ -47,6 +49,7 @@
     <script src="/scripts/account/subscription-service.script.js"></script>
     <script src="/scripts/manager/imagemanager.script.js"></script>
     <link rel="stylesheet" href="/styles/loader/spinner.style.css">
+    <script src="/scripts/manager/requests.script.js"></script>
     <script src="/scripts/account.script.js"></script>
     <script src="/scripts/manager/query-manager.script.js"></script>
     <script src="/scripts/account.maincontent.script.js"></script>
@@ -305,8 +308,55 @@
         
 
         <div class="section" id="integrations">
-            <h2>Broker</h2>
-            <p>Activity log content...</p>
+            <div class="section-header">
+                <h2>Connected Apps</h2>
+                <p>Manage the apps connected to your SwapiX account</p>
+            </div>
+            <div class="connected-apps">
+                <div class="app-item">
+                    <div class="app-info">
+                        <img src="/media/icons/logo.png" alt="App Logo" class="app-logo">
+                        <span class="app-name">SwapiX</span>
+                    </div>
+                    <div class="app-actions">
+                        <button class="app-delete">
+                            <span>Disconnect</span>
+                        </button>
+                        <button class="app-menu">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="app-menu-options">
+                            
+                            <div class="app-details">
+                                <h4>SwapiX</h4>
+                                <p>Access youre account to receive youre Email/Username and User related data.</p>
+                                <p>Connected since: <span>May 10, 2023</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-item">
+                    <div class="app-info">
+                        <img src="https://github.com/fluidicon.png" alt="App Logo" class="app-logo">
+                        <span class="app-name">Github</span>
+                    </div>
+                    <div class="app-actions">
+                        <button class="app-delete">
+                            <span>Disconnect</span>
+                        </button>
+                        <button class="app-menu">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="app-menu-options">
+                            <div class="app-details">
+                                <h4>Github</h4>
+                                <p>Access youre account to receive youre Email/Username.</p>
+                                <p>Connected since: <span>May 10, 2023</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section" id="subscriptions">

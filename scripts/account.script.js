@@ -2,6 +2,7 @@ const requestURL = "https://mutual-loved-filly.ngrok-free.app/api/v1/";
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("content-type", "application/json");
+myHeaders.append("ngrok-skip-browser-warning","true");
 const requestOptions = {
             method: "GET",
             headers: myHeaders,
@@ -94,28 +95,8 @@ document.addEventListener('DOMContentLoaded',async function() {
             console.error(error);
         }); 
         
-        await fetch(requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID") , requestOptions)
-        .then(response => {
-            if (response.ok) {
-              return response;
-            } else {
-              throw new Error("Login failed: " + response.body);
-            }
-          })
-        .then(data => {
-            const imageManager = new ImageManager();
-            const imageUrl = requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID");
-            const imageKey = "profilePic?=" + getCookie("profileID");
-            imageManager.saveImage(imageKey, imageUrl);
-            imageManager.getImage(imageKey).then(url => {
-                console.log("Retrieved image URL:", url);
-            });
-            document.getElementById("account-picture").src = requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID");
-        })
-        .catch(error => {
-            showError(error);
-            console.error(error);
-        });
+        var networkManager = new JWLimitedRequestManager();
+        networkManager.loadImageIntoFrame(requestURL + "content/profiles?ApiKey=" +getCookie("swpKey") + "&traderID=" + getCookie("profileID"),document.getElementById("account-picture"));
         generateNotificationRows(notificationData);
 
         setTimeout(() => {
@@ -123,6 +104,14 @@ document.addEventListener('DOMContentLoaded',async function() {
             setTimeout(() => {
                 document.body.classList.add('loaded-hidden');
                 showRelevantPage();
+                const appMenuButtons = document.querySelectorAll('.app-menu');
+
+                appMenuButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const menuOptions = button.nextElementSibling;
+                    menuOptions.classList.toggle('show');
+                });
+                });
             }, 500);
         }, 2000);
     }

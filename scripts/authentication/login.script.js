@@ -2,35 +2,43 @@ const usingRecentUser = false;
 const recentUserName = "";
 
 
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function() 
+{
     if(getCookie("swpKey") != null && getCookie("profileID") != null)
     {
       if(new QueryManager().getParam("action") == "login")
       {
-        if(new QueryManager().getParam("key") == "webApp"){
+        if(new QueryManager().getParam("key") == "webApp")
+        {
           window.location.href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
         }
       }
-      else{
+      else
+      {
         window.location.href = "/pages/account/" + new QueryManager().getQueryString();
       }
     }
-    else{
-      if(getCookie("__swp_cgb_account-username") !== null){
+    else
+    {
+      if(getCookie("__swp_cgb_account-username") !== null)
+      {
         document.getElementById("previously-used-account").style.display = "block";
         document.getElementById("recent-username").innerHTML = "<strong>Username:</strong> " + getCookie("__swp_cgb_account-username");
         document.getElementById("recent-email").innerHTML = "<strong>Email:</strong> " + getCookie("__swp_cgb_account-email");
       }
       
-      setTimeout(() => {
+      setTimeout(() => 
+      {
         document.body.classList.add('loaded');
-        setTimeout(() => {
+        setTimeout(() => 
+        {
             document.body.classList.add('loaded-hidden');
         }, 500);
-    }, 1000);
+      }, 1000);
     }
 
-    document.getElementById("logIn").addEventListener("click", async function(event) {
+    document.getElementById("logIn").addEventListener("click", async function(event) 
+    {
         event.preventDefault();
         
         var username = document.getElementById("username-login").value;
@@ -41,17 +49,21 @@ document.addEventListener('DOMContentLoaded', async function() {
             password: password
         };
 
-        if(usingRecentUser){
+        if(usingRecentUser)
+        {
           raw.userName = getCookie("__swp_cgb_account-username");
         }
 
-        const dataBlob = new Blob([JSON.stringify(raw)], {
+        const dataBlob = new Blob([JSON.stringify(raw)], 
+        {
             type: "application/json"
-       });
+        });
         
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("content-type", "application/json");
+        myHeaders.append("ngrok-skip-browser-warning","true");
+
         const requestOptions = {
             method: "POST",
             content: "application/json",
@@ -71,7 +83,8 @@ document.addEventListener('DOMContentLoaded', async function() {
               throw new Error("Login failed: " + response.body);
             }
           })
-          .then(data => {
+          .then(data => 
+          {
             showError("login", "Login successful!");
             console.log(data);
             setCookie("swpKey",data.apiKey,)
@@ -84,7 +97,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                 window.location.href = "https://app.swapix.fun/?action=login&usr=" + getCookie("profileID") + "&key=" + getCookie("swpKey");
               }
             }else{
-              window.location.href = "/pages/account/" + new QueryManager().getQueryString();
+              setTimeout(() =>{
+                window.location.href = "/pages/account/" + new QueryManager().getQueryString();
+              },700)
             }
             
           })
@@ -126,6 +141,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             const myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("content-type", "application/json");
+            myHeaders.append("ngrok-skip-browser-warning","true");
             const requestOptions = {
                 method: "POST",
                 content: "application/json",
@@ -181,6 +197,7 @@ async function login(username, password)
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("content-type", "application/json");
+        myHeaders.append("ngrok-skip-browser-warning","true");
         const requestOptions = {
             method: "POST",
             content: "application/json",
@@ -200,12 +217,16 @@ async function login(username, password)
           })
           .then(data => {
             showError("login", "Login successful!");
-            console.log(data);
+
             setCookie("swpKey",data.apiKey,)
             setCookie("profileID",data.userId,)
             setCookie("swpDefault","1");
             setCookie("__b__a_version","b")
-            window.location.href = "/pages/account/" + new QueryManager().getQueryString();
+
+            setTimeout(() =>{
+              window.location.href = "/pages/account/" + new QueryManager().getQueryString();
+            },1000)
+
           })
           .catch(error => {
             showError("login",error);
@@ -214,19 +235,22 @@ async function login(username, password)
 }
 
 function showError(where, content) {
-  switch(where){
+  switch(where)
+  {
     case "signup":
       document.getElementById("message-signup").innerText = content;
+      document.getElementById("message-signup").classList.add("show");
       setTimeout(() => 
       {
-        document.getElementById("message-signup").innerText = "";
+        document.getElementById("message-signup").classList.remove("show");
       },1500);
     break;
     case "login":
       document.getElementById("message").innerText = content;
+      document.getElementById("message").classList.add("show");
       setTimeout(() => 
       {
-        document.getElementById("message").innerText = "";
+        document.getElementById("message").classList.remove("show");
       },1500);
     break;
   }
