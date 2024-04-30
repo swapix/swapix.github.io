@@ -6,7 +6,7 @@
 {
     transition: background-color 0.3s ease;
     width: 100%;
-    z-index: 1000;
+    z-index: 99;
     display: flex;
     position:  fixed;
     align-items: baseline;

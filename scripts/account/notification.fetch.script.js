@@ -76,14 +76,29 @@ function showMessageDetails(messageId) {
         </div>
     </div>
     `;
-    sidePanel.classList.add("show");
+    
+    var overlay = document.getElementById('modal-overlay');
+    overlay.style.display = 'block';
+
+    setTimeout(() => 
+    {
+        overlay.classList.add("show");
+        sidePanel.classList.add("show");
+    }, 100);
+
 }
 
 
 // Function to hide the side panel
 function hideSidePanel() {
     const sidePanel = document.getElementById("message-side-panel");
-    sidePanel.classList.remove("show");
+
+    var overlay = document.getElementById('modal-overlay');
+        overlay.classList.remove("show");
+        sidePanel.classList.remove("show");
+        setTimeout(() => {
+        overlay.style.display = 'none';
+    },200)
 }
 
 

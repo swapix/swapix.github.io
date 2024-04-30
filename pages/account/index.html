@@ -31,7 +31,8 @@
     <link rel="stylesheet" href="/styles/dialogs/accunt-picture.style.css">
     <link rel="stylesheet" href="/styles/account/pages/subscription.style.css">
     <link rel="stylesheet" href="/styles/dialogs/edit.style.css">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
     <link rel="stylesheet" href="/styles/account/pages/integrations.style.css">
     <link rel="stylesheet" href="/styles/account/pages/notifications.style.css">
     <link rel="stylesheet" href="/styles/components/error-container.style.css">
@@ -58,43 +59,49 @@
     <script>window.lemonSqueezyAffiliateConfig = { store: "swapix" };</script>
 </head>
 <body>
-    <div id="edit-dialog" class="edit-dialog">
-        <div class="dialog-content">
-            <h2>Edit Information</h2>
-            <form id="edit-form">
-                <label for="edit-value">New Value:</label>
-                <input type="text" id="edit-value" name="edit-value" placeholder="Enter new value">
-                <button type="submit">Save</button>
-                <button type="button" onclick="closeDialog()">Cancel</button>
-            </form>
+    
+    <div id="modal-overlay" class="modal-overlay">
+        <div id="profile-picture-dialog" class="dialog">
+            <div class="dialog-content">
+                <span class="close-button"><span class="material-symbols-outlined">
+                    close
+                    </span></span>
+                <h2>Profile Picture</h2>
+                <div id="profile-picture-drag-drop-container" class="drag-drop-container" 
+                    ondragover="profilePictureDragDrop.dragOver(event)" 
+                    ondragleave="profilePictureDragDrop.dragLeave(event)" 
+                    ondrop="profilePictureDragDrop.drop(event)">
+                    <input type="file" id="profile-picture-file-input" 
+                        onchange="profilePictureDragDrop.fileInputChanged()" />
+                    <label for="profile-picture-file-input" class="file-input-label">
+                        Drag & Drop or Click to Upload
+                    </label>
+                </div>
+                <img id="profile-picture-preview" class="preview-image" alt="Profile Picture Preview" />
+                <div class="button-container">
+                    <button class="picture-dialog-button"onclick="profilePictureDialog.save()">Save</button>
+                    <button class="picture-dialog-button"onclick="profilePictureDialog.cancel()">Cancel</button>
+                </div>
+            </div>
+        </div>    
+        <div id="edit-dialog" class="edit-dialog">
+            <div class="dialog-content">
+                <h2>Edit Information</h2>
+                <form id="edit-form">
+                    <label for="edit-value">New Value:</label>
+                    <input type="text" id="edit-value" name="edit-value" placeholder="Enter new value">
+                    <button type="submit">Save</button>
+                    <button type="button" onclick="closeDialog()">Cancel</button>
+                </form>
+            </div>
         </div>
     </div>
-    <div id="modal-overlay" class="modal-overlay"></div>
+    
     <div class="overlay" id="overlay"></div>
 
     <div id="profile-picture-overlay" class="overlay"></div>
 
-    <div id="profile-picture-dialog" class="dialog">
-        <div class="dialog-content">
-            <h2>Change Profile Picture</h2>
-            <div id="profile-picture-drag-drop-container" class="drag-drop-container" 
-                ondragover="profilePictureDragDrop.dragOver(event)" 
-                ondragleave="profilePictureDragDrop.dragLeave(event)" 
-                ondrop="profilePictureDragDrop.drop(event)">
-                <input type="file" id="profile-picture-file-input" 
-                    onchange="profilePictureDragDrop.fileInputChanged()" />
-                <label for="profile-picture-file-input" class="file-input-label">
-                    Drag & Drop or Click to Upload
-                </label>
-            </div>
-            <img id="profile-picture-preview" class="preview-image" alt="Profile Picture Preview" />
-            <div class="button-container">
-                <button class="picture-dialog-button"onclick="profilePictureDialog.save()">Save</button>
-                <button class="picture-dialog-button"onclick="profilePictureDialog.cancel()">Cancel</button>
-            </div>
-        </div>
-    </div>
-
+   
 
     <div id="error-container" class="error-container">
         <div class="error-message">
@@ -319,9 +326,7 @@
                         <span class="app-name">SwapiX</span>
                     </div>
                     <div class="app-actions">
-                        <button class="app-delete">
-                            <span>Disconnect</span>
-                        </button>
+                        
                         <button class="app-menu">
                             <i class="fas fa-ellipsis-v"></i>
                         </button>
@@ -332,6 +337,9 @@
                                 <p>Access youre account to receive youre Email/Username and User related data.</p>
                                 <p>Connected since: <span>May 10, 2023</span></p>
                             </div>
+                            <button class="app-delete">
+                                <span>Disconnect</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -341,9 +349,6 @@
                         <span class="app-name">Github</span>
                     </div>
                     <div class="app-actions">
-                        <button class="app-delete">
-                            <span>Disconnect</span>
-                        </button>
                         <button class="app-menu">
                             <i class="fas fa-ellipsis-v"></i>
                         </button>
@@ -351,8 +356,13 @@
                             <div class="app-details">
                                 <h4>Github</h4>
                                 <p>Access youre account to receive youre Email/Username.</p>
-                                <p>Connected since: <span>May 10, 2023</span></p>
+                                <p>Linked on: <span>May 10, 2023</span></p>
+                                
+                                
                             </div>
+                            <button class="app-delete">
+                                <span>Disconnect</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -374,17 +384,7 @@
                             </h3>
                             <p id="subcon-subscirption-description">Get access to exclusive features!</p>
                             <ul class="subscription-features">
-                                <li>
-                                    <i aria-hidden="true" class="checkmark">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" />
-                                    </svg>
-                                    </i>
-                                    <span class="name">Premium Support</span>
-                                </li>
-                                <li>Feature 2</li>
-                                <li>Feature 3</li>
+                                
                             </ul>
                         </div>
                     </div>

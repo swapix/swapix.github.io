@@ -3,22 +3,57 @@
     position: fixed;
     top: 50%;
     z-index: 1000;
+    min-height: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    transition: all 0.4s ease-in-out;
+    background-color: rgb(255, 255, 255) !important;
+    backdrop-filter: blur(15px);
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dialog-content {
-    text-align: center;
+    /*text-align: center;*/
 }
 
+.dialog-content h2{
+    font-family: "Manrope";
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    left: 25px;
+}
+
+.dialog-content.close-button {
+    color: #aaa;
+    padding: 10px;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 45px;
+    margin-right: 10px;
+    width: 40px;
+    height: fit-content;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);;
+  }
+  
+  .dialog-content.close-button:hover,
+  .dialog-content.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 .drag-drop-container {
-    border: 2px dashed #6c63ff;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ebebeb;
+    border-radius: 10px;
     padding: 40px;
+    min-height: 240px;
     margin-bottom: 20px;
 }
 
@@ -28,31 +63,59 @@
 
 .file-input-label {
     cursor: pointer;
-    color: #6c63ff;
+    color: #2d2d2d;
     font-weight: bold;
 }
 
 .file-input {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 13px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 20%;
 }
 
 .preview-image {
-    max-width: 100%;
+    max-width: 200px;
+    max-height: 200px;
     display: none;
 }
 
 .button-container {
-    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-left: 20px;
+    display: flex;
 }
 
 .picture-dialog-button {
-    background-color: #1c13c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
     color: #fff;
-    padding: 10px 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 13px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    margin-right: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    width: 20%;
 }
 
 .picture-dialog-buttonn:hover {

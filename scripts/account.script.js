@@ -128,17 +128,37 @@ function logoutFromMain(){
     window.location.href = "/"
 }
 function openDialog(field) {
-    var dialog = document.getElementById('edit-dialog');
-    var overlay = document.getElementById('modal-overlay');
-    dialog.style.display = 'block';
-    overlay.style.display = 'block';
+    openModal();
 }
 
+function openModal() 
+    {
+        var modal = document.getElementById('edit-dialog');
+        var overlay = document.getElementById('modal-overlay');
+        modal.style.display = "block";
+        overlay.style.display = 'block';
+
+        setTimeout(() => 
+        {
+            overlay.classList.add("show");
+        }, 100);
+    }
+    
+    function closeModal() 
+    {
+        
+        var modal = document.getElementById('edit-dialog');
+        var overlay = document.getElementById('modal-overlay');
+        overlay.classList.remove("show");
+        setTimeout(() => {
+        modal.style.display = "none";
+        overlay.style.display = 'none';
+        },200)
+        
+    }
+
 function closeDialog() {
-    var dialog = document.getElementById('edit-dialog');
-    var overlay = document.getElementById('modal-overlay');
-    dialog.style.display = 'none';
-    overlay.style.display = 'none';
+    closeModal();
 }
 
 function showError(ex) {

@@ -1,13 +1,22 @@
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: none;
+    position: fixed !important;
+    z-index:100;
+    transition: all 0.4s ease-in-out;
+    left: 0 !important; 
+    top: 0 !important;
     width: 100%;
+    opacity: 0;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    z-index: 900; /* Ensure it's behind the dialog */
-    display: none; /* Initially hidden */
+    backdrop-filter: blur(20px);
+    overflow: auto;
+    background-color: rgba(95, 95, 95, 0.419);
 }
+
+.modal-overlay.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
 .edit-dialog {
     position: fixed;
@@ -26,7 +35,11 @@
 }
 
 .edit-dialog h2 {
-    margin-bottom: 20px;
+    font-family: "Manrope";
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    left: 25px;
 }
 
 .edit-dialog form label {

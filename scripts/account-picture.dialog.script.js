@@ -1,16 +1,25 @@
 const profilePictureDialog = {
     open: function() {
-        const overlay = document.getElementById('profile-picture-overlay');
         const dialog = document.getElementById('profile-picture-dialog');
+        var overlay = document.getElementById('modal-overlay');
         overlay.style.display = 'block';
         dialog.style.display = 'block';
+
+        setTimeout(() => 
+        {
+            overlay.classList.add("show");
+        }, 100);
     },
 
     close: function() {
-        const overlay = document.getElementById('profile-picture-overlay');
         const dialog = document.getElementById('profile-picture-dialog');
-        overlay.style.display = 'none';
-        dialog.style.display = 'none';
+
+        var overlay = document.getElementById('modal-overlay');
+        overlay.classList.remove("show");
+        setTimeout(() => {
+            dialog.style.display = 'none';
+            overlay.style.display = 'none';
+        },200)
     },
 
     save: function() {
